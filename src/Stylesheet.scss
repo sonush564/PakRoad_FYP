@@ -1,0 +1,960 @@
+
+  @import
+ url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css); 
+ @import url('https://fonts.cdnfonts.com/css/catamaran');
+ 
+@import url('https://fonts.cdnfonts.com/css/poppins');
+*{
+    margin-top: 0;
+    padding: 0;
+  }
+  .App {
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  #LP{
+    color: #06339c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #DLR{
+    color: #06339c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #DD{
+    color: #06339c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #ID{
+    color: #06339c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #RD{
+    color: #06339c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #stps{
+    float: left;
+  }
+  #steps{
+  float: left;
+  width:100%;
+  text-align: left;
+  font-weight: 600;
+  margin-left: 15px;
+  font-size: 17px;
+  }
+  #docs{
+    float: left;
+    width:100%;
+    text-align: left;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 17px;
+    
+    }
+    #game{
+      float: left;
+      width:100%;
+      border: solid 2px;
+      }
+      #ins{
+        float: left;
+      }
+      #insinfo{
+        float: left;
+        text-align: left;
+        font-weight: 600;
+        font-size: px;
+      }
+    #carimg{
+      width:70%;
+      height:80%;
+      float: left;
+      margin-left: 14%;
+      margin-top: 5%;
+
+
+    }
+  #navbarScrollingDropdown{
+    color: white;
+  }
+  
+  #gameinfo{
+    float: left;
+
+  }
+  
+
+  #menu{
+   
+    float: left;
+    margin-right: 15px;
+    font-weight: bold;
+    
+  }
+  #infoL{
+  float: left;
+  border-top:none ;
+  border-bottom: none;
+  border-left: none;
+  border-right: solid 2px gray;
+  }
+  
+  
+  #footer{
+     float: left;
+    background-color:#360568;
+  margin-top: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .clear { clear: both; height: 100px; }
+  
+  #banner{
+  background-image: url(./Components/Images/WhiteBanner.jpeg);
+  background-size: cover;
+  height: 650px;
+  }
+ 
+  .HomeDiv{
+    height: 1300px;
+  }
+ 
+  #images{
+    width:35px;
+    height:35px;
+    margin-top: 10px;
+    float: right;
+    margin-right: 8px;
+  
+  } 
+  
+  #cp{
+    float: left;
+    color: white;
+    margin-top: 15px;
+    margin-left: 5px;
+    font-weight: lighter;
+  }
+  #form{
+    background-color: rgb(73, 71, 71);
+    float: left;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 100px;
+  height: 40px;
+  }
+  #formpic{
+    width: 23px;
+    height: 23px;
+    float: left;
+  }
+  #abs{
+    color: white;
+    cursor: pointer;
+  }
+  #tls{
+    margin-left: 15px;
+    font-weight: lighter;
+    color: black;
+  }
+  #infoR{
+    float: left;
+    }
+  .vl {
+    border-left: 2px solid white;
+    height: 50px;
+    margin-right: 25px;
+  }
+  #bg{
+    width: 100%;
+  }
+
+ 
+  #hmenu{
+    background-color:#360568;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  height: 100px;
+  margin-top: 20%;
+  margin-right: 35px;
+  border-radius: 5px;
+
+  }
+  #homemenu{
+    margin-top: 18%;
+    width: 100%;
+    }
+  #hnavbarScrollingDropdown{
+    margin-top: 25px;
+    color: white;
+    font-weight: bold;
+  }
+#habs{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+#gamebtn{
+    background-color: rgb(34, 35, 145);
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 150px;
+  height: 50px;
+  margin-top: 3%;
+margin-bottom: 3%;
+margin-right:5%
+  
+
+}
+#bg{
+  background-color: #360568;
+   height: 200px;
+   
+}
+  #mainmenu{
+    margin-top: 100px;
+    width: 100%;
+  }
+  #warsign{
+    width: 125px;
+    height: 125px;
+  }
+  #infosign{
+    width: 15px;
+    height: 15px;
+   
+  }
+  #txt{
+    border: solid;
+    float: right;
+    margin-left: 200px;
+  }
+  #light{
+    margin-top: 1%;
+    float: left;
+    margin-left: 30px;
+  }
+  #BtnQuiz{
+    margin-top: 6%;
+    float: right;
+    margin-right: 50px;
+    background-color: #363c4a;
+  }
+  #divs{
+   filter: drop-shadow(-6px 15px 15px rgba(15, 15, 0, 0.7));
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #div1{
+  background-color: #360568;
+  color: white;
+  float: left;
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  width:380px;
+  height: 300px;
+  margin-right: 60px;
+  border-radius: 5px;
+  }
+  #div1:hover{
+    background-color:#4589ff;
+    color: black;
+  }
+  #div2{
+    background-color: #360568;
+    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    width:430px;
+    color: white;
+    height: 300px;
+    float: left;
+    margin-right: 60px;
+    border-radius: 5px;
+    }
+    #div2:hover{
+      background-color: #4589ff;
+      color: black;
+    }
+    
+    #div3{
+      background-color: #360568;;
+      float: left;
+      color: white;
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+      width:380px;
+      height: 300px;
+      border-radius: 5px;
+    }
+    #div3:hover{
+      background-color: #4589ff ;
+      color: black;
+    }
+    
+    @media(max-width: 800px){
+      #div1{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 220px;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-left: 20%;
+        border-radius: 5px;
+      }
+      #div2{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 220px;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-left: 20%;
+        border-radius: 5px;
+      }
+      #div3{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 220px;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-left: 20%;
+        border-radius: 5px;
+      }
+      #infocontainer{
+        margin-top: 20px;
+      }
+      #LP{
+        margin-top: 60px;
+      }
+      #DLR{
+        margin-top: 60px;
+      }
+      #DD{
+        margin-top: 60px;
+      }
+      #ID{
+        margin-top: 60px;
+     }
+      #RD{
+        margin-top: 60px
+      }
+      #navbarScrollingDropdown{
+        color: black;
+      }
+     
+      #bg{
+        width:fit-content;
+      }
+      .vl{
+        border-left: 0px;
+        height: 0px;
+        margin-right: 0px;
+      }
+      #menu{
+        text-align: left;
+      
+      }
+      #abs{
+        color: black;
+      }
+      #mainmenu{
+        margin-top: 25%;
+        width: fit-content;
+        width: 100%;
+      }
+      #homemenu{
+      margin-top: 26.5%;
+      width: 100%;
+      }
+      #hmenu{
+        background-color:white;
+        overflow:h
+      }
+      #hnavbarScrollingDropdown{
+        color:black;
+        float: left;
+      }
+      #habs{
+        color: black;
+        float: left;
+      }
+     
+  #banner{
+    background-image: url(./Components/Images/WhiteBanner.jpeg);
+    background-size: cover;
+    height: 200px;
+  }
+    #img1{
+      width: 300px;
+      height: 80px;
+      margin-top: 100px; 
+      margin-right: 505px; 
+     }
+     #img2{
+      width: 100px;
+      height: 80px;
+      margin-top: 80px; 
+     }
+     #img3{
+      width: 70px;
+      height: 70px;
+      margin-top: 10px; 
+      margin-left: 30px; 
+     }
+     #info1{
+      float: left;
+      margin-left: 7s5px;
+     }
+     #info1o1{
+      margin-top:20px ;
+      margin-right: 100px;
+     }
+     #info2{
+      margin-right: 25px;
+     }
+     #info2o1{
+      margin-top: 10px;
+      margin-right: 35px;
+     }
+     #info3{
+      margin-left: 20px;
+      margin-top: 2px;
+     }
+     #info3o1{
+      margin-top: 10px;
+      margin-left: 20px;
+     }
+     #hmenu{
+      height:40px;
+      margin-top: 0%;
+    
+      }
+    
+    }
+  
+   #img1{
+    width: 100px;
+    height: 80px;
+    margin-top: 80px; 
+    margin-right: 55px; 
+   }
+   #img2{
+    width: 100px;
+    height: 80px;
+    margin-top: 80px; 
+   }
+   #img3{
+    width: 70px;
+    height: 70px;
+    margin-top: 90px; 
+    margin-left: 30px; 
+   }
+   #info1{
+    float: left;
+    margin-left: 55px;
+   }
+   #info1o1{
+    margin-top:20px ;
+    margin-right: 80px;
+   }
+   #info2{
+    margin-right: 25px;
+   }
+   #info2o1{
+    margin-top: 10px;
+    margin-right: 35px;
+   }
+   #info3{
+    margin-left: 20px;
+    margin-top: 2px;
+   }
+   #info3o1{
+    margin-top: 10px;
+    margin-left: 20px;
+   }
+  
+  
+  .mulDrop{
+    position:absolute;
+    left: 110px;
+    background-color: white;
+    top: 1px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+  }
+  .border{
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .navbar.navbar-default {
+    border-bottom: 0;
+  }
+  
+  
+  
+  
+  
+  
+  .question-card {
+    /* Center the div  */
+    margin: 0 auto;
+  
+    /* Dimensions  */
+    width: 80%; /* Can be in percentage also. */
+    height: auto;
+  
+    /* Visual  */
+   
+    padding: 16px;
+    border-radius: 16px;
+    
+  }
+  
+  ul {
+    list-style:circle;
+    
+  }
+  
+  li {
+    margin-top: 80px;
+    float: right;
+    margin-right: 50px;
+    width: 400px;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  
+
+  //Hussains css
+  body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .app {
+    background-color: white;
+    width: 1200px;
+    min-height: 600px;
+    height: min-content;
+    border-radius: 15px;
+    padding: 20px;
+ border: solid black 3px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .score-section {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    color: black;
+
+    margin-right: 300px;
+  }
+  .quizDiv{
+    pointer-events: none;
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
+  }
+
+  .quizLan{
+    background-color: #4589ff;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+   
+    position: absolute;
+    top: 210px;
+    right: 450px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+
+  }
+  .cross{
+    margin-left: 450px;
+    margin-top: -40px;
+    width: 100px;
+    height: 40px;
+  }
+  .bb{
+    color: white;
+    margin-top: -10px;
+    font-size: xx-large;
+  }
+  .quizUB{
+ margin-top: 20px;
+ margin-right: 110px;
+  }
+  .quizEB{
+    
+    margin-right: 110px;
+     }
+  .EB{
+    width: 180px;
+    height: 60px;
+  }
+  
+  
+  /* QUESTION/TIMER/LEFT SECTION */
+  .question-section {
+    width: 1000px;
+    position: absolute;
+  }
+  
+  .question-count {
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: black;
+  }
+  
+  .question-count span {
+    font-size: 28px;
+    
+  }
+  
+  .question-text {
+    margin-bottom: 12px;
+    margin-left: 25px;
+    font-size: 40px;
+    color: black;
+  }
+  
+  .timer-text {
+    position: absolute;
+
+    width: 150px;
+    height: 50px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-right: 500px;
+    
+    
+  }
+  
+  /* ANSWERS/RIGHT SECTION */
+  .answer-section {
+    width: 1400px;
+    display: block;
+    margin-left: 120px;
+    margin-top: 250px;
+
+    justify-content: space-between;
+    
+  }
+  
+  .button{
+    width: 35%;
+    height: 80px;
+    border: 0ch;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+
+  }
+  
+  
+  
+  button:hover {
+    background-color: #555e7d;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button svg {
+    margin-right: 5px;
+  }
+  .option{
+    width: 35%;
+    height: 80px;
+    border: 0ch;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 30px;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    background-color: black;
+    cursor: pointer;
+  }
+  .btn{
+    width: 35%;
+    height: 80px;
+    border: 0ch;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  }
+  .nextBtn{
+    margin-top: 450px;
+    margin-right: 60px;
+    width: 100px;
+  }
+  .date{
+    margin-top: 100px;
+    width: 200px;
+}
+.time{
+    width: 200px;
+    margin-top: 100px;
+}
+.shareRide1{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+  @media (max-width: 800px) {
+    .shareRide1{
+      display: block;
+      justify-content: center;
+  }
+  .area{
+    width: 210px;
+    margin-top: 100px;
+}
+  }
+  .MenuItem{
+    width: 170px;
+    display: block;
+  }
+.area{
+    width: 170px;
+    margin-top: 100px;
+}
+.area1{
+  width: 210px;
+  margin-top: 100px;
+}
+.needFeild{
+  width: 170px;
+    margin-top: 100px;
+}
+.shareRide2{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-bottom: 60px;
+}
+@media (max-width: 800px) {
+  .shareRide2{
+    display: block;
+    justify-content: center;
+}
+.area{
+  width: 210px;
+  margin-top: 100px;
+}
+}
+.shareRide{
+    margin-top: 150px;
+    margin-left: 130px;
+    margin-right: 130px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.4);
+   margin-bottom: 200px;
+  
+  
+}
+
+#needridee{
+
+  margin-left:69px;
+    margin-right: 70px;
+}
+.needRide{
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.3);
+   margin-bottom: 200px;
+   border-radius: 10px;
+   padding-top: 8px;
+   font-weight: bold;
+   font-size: xx-large;
+   
+}
+.ResultRide{
+  margin-top: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.3);
+ margin-bottom: 200px;
+ border-radius: 10px;
+ padding-top: 8px;
+ 
+}
+.thead{
+  font-weight: bold;
+  font-size: large;
+}
+.tbody{
+  font-size: large;
+}
+
+.search{
+     display: flex;
+    justify-content: space-evenly;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+@media (max-width: 800px) {
+  .search{
+    display: block;
+    margin-left: 80px;
+    margin-right: 150px;
+  }
+}
+
+.submit{
+  margin-top: 40px;
+}
+.submitB{
+  width: 160px;
+}
+.submitLoad{
+  margin-top: 40px;
+  width: 70px;
+}
+.submitN{
+   margin-top: 110px;
+   margin-left: 20px;
+}
+.searchButton{
+    display: flex;
+    width: 150px;    
+}
+  .pupose{
+    margin-top: 15px;
+  }
+  .sel{
+    height: 40px;
+    width: 400px;
+  }
+  .ASB{
+    margin-top: 20px;
+    margin-left: 200px;
+  }
+ .AbSubmit{
+  width: 150px;
+ }
+ .LB{
+  width: 150px;
+ }
+  .AbLoad{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 200px;
+  }
+  
+ .lanButton{
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 1180px;
+ }
+ .urduB{
+  width: 100px;
+  position: absolute;
+ }
+ .englishB{
+  width: 100px;
+  
+ }
+ .LSdiv{
+  margin-left: 50px;
+ }
+ .LButton{
+  margin-top: 10px;
+  margin-left: 180px;
+ }
+ 
+ .infoButton{
+  margin-top: 340px;
+  margin-left: 800px;
+
+ }
+ .infoB{
+  width: 300px;
+  height: 80px;
+  
+ 
+ }
+ .HM{
+  margin-top: -415px;
+ }
+ .aheader{
+  width: 1366px;
+  margin-left: -100px;
+  margin-right: -99px;
+  margin-top: -60px;
+ }
