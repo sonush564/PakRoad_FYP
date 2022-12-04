@@ -30,10 +30,10 @@ const Quiz = ({changeLanguage, toggleDark, settoggleDark}) => {
         < AiFillCloseCircle className='cross' onClick={()=>{{navigate('/Quiz')}{setLnDive('')}{setLanDive(false)}}}/>
       <p className='bb'>Select Your Language</p>
         <div className='quizUB'>
-      <Button className='EB' variant='contained' color='success' id='BtnQuiz'onClick={() => navigate('/testquiz')} > اردو</Button> 
+      <Button className='EB' sx={{fontSize: 25}} variant='contained' color='success' id='BtnQuiz'onClick={() => navigate('/testquiz')} > اردو</Button> 
       </div>
       <div className='quizEB'>
-      <Button className='EB' variant="contained" id='BtnQuiz'onClick={() => navigate('/QuizFinal')}>English</Button>
+      <Button className='EB' sx={{fontSize: 18}} variant="contained" id='BtnQuiz'onClick={() => navigate('/QuizFinal')}>English</Button>
       </div>
 
       </div>

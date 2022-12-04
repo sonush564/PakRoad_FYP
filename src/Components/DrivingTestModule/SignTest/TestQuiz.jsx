@@ -38,12 +38,16 @@ import O91 from '../../../QuestionsSigns/Q9/O91.png'
 import O92 from '../../../QuestionsSigns/Q9/O92.png'
 import O93 from '../../../QuestionsSigns/Q9/O93.png'
 import O94 from '../../../QuestionsSigns/Q9/O94.png'
+import O101 from '../../../QuestionsSigns/Q10/O101.png'
+import O102 from '../../../QuestionsSigns/Q10/O102.png'
+import O103 from '../../../QuestionsSigns/Q10/O103.png'
+import O104 from '../../../QuestionsSigns/Q10/O104.png'
 import { set, setSeconds } from 'date-fns';
 export default function App() {
 	const questions = [
 		{   
 			questionId: 1,
-			questionText: 'Select the sign of “Road is closed ahead” ',
+			questionText: 'ذیل میں سے آگے سڑک بند ہے کا اشارہ کونسا ہے؟ ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O21}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
 				{ answerText: <img className="img-responsive" src={O22}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -53,7 +57,7 @@ export default function App() {
 		},
 		{  
 			questionId: 2,
-			questionText: 'Select the sign of “No entry”  ',
+			questionText: 'ذیل میں سے داخلہ بند ہے کا اشارہ کونسا ہے؟ ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O1}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O2}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
@@ -63,7 +67,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 3,
-			questionText: 'Select the sign of “Slowdown” ',
+			questionText: 'ذیل میں سے آہستہ چلنے کا اشارہ کونسا ہے؟ ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O31}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
 				{ answerText: <img className="img-responsive" src={O32}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -73,7 +77,7 @@ export default function App() {
 		},
 		{
 			questionId: 4,
-			questionText: 'Select the sign of “No entry for vehicles exceeding width more than 8’-6” ” ',
+			questionText: 'ذیل میں سے ساڑھے آٹھ فٹ سے زیادہ چوڑی گاڑیوں کا داخل ممنوع ہے کا اشارہ کونسا ہے؟',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O41}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
 				{ answerText: <img className="img-responsive" src={O42}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -83,17 +87,17 @@ export default function App() {
 		},
 		{ 
 			questionId: 5,
-			questionText: [<img className="img-responsive" src={noright}  alt="logo" width={"50px"} height={"50px"} />,'     this sign means ?'],
+			questionText: [<img className="img-responsive" src={noright}  alt="logo" width={"50px"} height={"50px"} />,'    اس نشان کا مطلب ہے؟'],
 			answerOptions: [
-				{ answerText: 'RIGHT TURN IS ALLOWED', isCorrect: false },
-				{ answerText: 'CHANGING TO THE RIGHT LANE IS PROHIBITE', isCorrect: false },
-				{ answerText: 'U TURN IS PROHIBITED', isCorrect: false },
-				{ answerText: 'RIGHT TURN IS PROHIBITED', isCorrect: true },
+				{ answerText: 'دائیں مڑنے کی اجازت ہے۔', isCorrect: false },
+				{ answerText: 'دائیں لین کو تبدیل کرنا ممنوع ہے۔', isCorrect: false },
+				{ answerText: 'یو ٹرن ممنوع ہے۔', isCorrect: false },
+				{ answerText: 'دائیں مڑنا منع ہے۔', isCorrect: true },
 			],
 		},
 		{ 
 			questionId: 6,
-			questionText: 'Select the sign of “Minor cross road from left” ',
+			questionText: 'ذیل میں سے چھوٹی سڑک بائیں جانب سے آ کر بڑی سڑک کھول رہی ہے کا اشاہ کونسا ہے؟  ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O51}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O52}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -103,7 +107,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 7,
-			questionText: 'Select the sign of “Tick the sign of “Two-way traffic”  ',
+			questionText: 'ذیل میں سے دوطرفہ ٹر یفک ہے کا اشارہ کونسا ہے؟ ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O61}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O62}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
@@ -113,7 +117,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 8,
-			questionText: 'Select the sign of “Compulsory roundabout”  ',
+			questionText: 'ذیل میں سے لا زمی گول چکر کا اشارہ کونسا ہے؟ ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O71}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O72}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
@@ -123,7 +127,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 9,
-			questionText: 'Select the sign of “other dangers”   ',
+			questionText: 'ذیل میں سے دیگر خطرات ہیں کا اشارہ کونسا ہے؟ ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O81}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
 				{ answerText: <img className="img-responsive" src={O82}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -133,7 +137,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 10,
-			questionText: 'Select the sign of “Honking horn prohibited” ',
+			questionText: '"ہنر بجانے کی ممانعت" کا نشان منتخب کریں ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O81}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O82}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -144,7 +148,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 11,
-			questionText: 'Select the sign of “Slippery road”  ',
+			questionText: '"سلپری روڈ" کا نشان منتخب کریں ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O91}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
 				{ answerText: <img className="img-responsive" src={O92}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
@@ -154,12 +158,83 @@ export default function App() {
 		},
 		{ 
 			questionId: 12,
-			questionText: 'Select the sign of “Uneven road”  ',
+			questionText: '"ناہموار سڑک" کا نشان منتخب کریں  ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O91}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O94}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
 				{ answerText: <img className="img-responsive" src={O92}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O93}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
+				
+			],
+		},
+		{ 
+			questionId: 14,
+			questionText: ['اگر آپ اپنے سامنے والی گاڑی کو اوور ٹیک کرنے کی کوشش کر رہے ہیں اور سامنے والی گاڑی راستہ نہیں دے رہی ہے تو آپ؟'],
+			answerOptions: [
+				{ answerText: 'مسلسل ہارن کا استعمال کریں', isCorrect: false },
+				{ answerText: 'سامنے والی گاڑی سے ایک فٹ کا فاصلہ رکھیں اور ہارن کا استعمال کریں', isCorrect: false },
+				{ answerText: 'اوور ٹیکنگ کے لیے صحیح وقت کا انتظار کریں', isCorrect: true },
+				{ answerText: 'انڈیگیٹرز استعمال کریں۔', isCorrect: false },
+			],
+		},
+		{ 
+			questionId: 15,
+			questionText: ['دو طرفہ سڑک پر آنے والی گاڑی کو کس طرف سے گزرنا چاہئے؟'],
+			answerOptions: [
+				{ answerText: 'دائیں', isCorrect: false },
+				{ answerText: 'کسی بھی طرف', isCorrect: false },
+				{ answerText: 'بائیں', isCorrect: true },
+				{ answerText: 'ان میں سے کوئی نہیں', isCorrect: false },
+			],
+		},
+		{ 
+			questionId: 16,
+			questionText: ['موٹر سائیکل سوار کو سڑک کی کون سی لین استعمال کرنی چاہیے؟'],
+			answerOptions: [
+				{ answerText: 'دائیں لین', isCorrect: false },
+				{ answerText: 'درمیان والی لین', isCorrect: false },
+				{ answerText: 'بائیں لین', isCorrect: true },
+				{ answerText: 'کوئی بھی نہیں', isCorrect: false },
+			],
+		},
+		{ 
+			questionId: 17,
+			questionText: ['موٹر وہیکل آرڈیننس کے کس سیکشن کے تحت موٹر سائیکل سوار کو ہیلمٹ پہننا ضروری ہے؟'],
+			answerOptions: [
+				{ answerText: '89-A', isCorrect: true },
+				{ answerText: '89-B', isCorrect: false },
+				{ answerText: '89-C', isCorrect: false },
+				{ answerText: '90-A', isCorrect: false },
+			],
+		},
+		{ 
+			questionId: 18,
+			questionText: ['سٹاپ لائن سے کیا مراد ہے؟'],
+			answerOptions: [
+				{ answerText: 'پیدل چلنے والوں کے کراسنگ کی جگہ', isCorrect: false },
+				{ answerText: 'موٹرسائیکل کو گزرنے کے لیے', isCorrect: false },
+				{ answerText: 'ٹریفک سگنل پر رکنا', isCorrect: true },
+				{ answerText: 'کچھ نہیں', isCorrect: false },
+			],
+		},
+		{ 
+			questionId: 19,
+			questionText: ['ٹریفک سگنل کی لال بتی جل رہی ہو تو گاڑی کہاں کھڑی کی جائے؟'],
+			answerOptions: [
+				{ answerText: 'اسٹاپ لائن کے ایک فٹ پر', isCorrect: false },
+				{ answerText: 'زیبرا کراسنگ پر', isCorrect: false },
+				{ answerText: 'سٹاپ لائن کے پیچھے', isCorrect: true },
+				{ answerText: 'کہیں بھی', isCorrect: false },
+			],
+		},
+		{ 
+			questionId: 20,
+			questionText: '"یو ٹرن ممنوع ہے" کا نشان منتخب کریں۔  ',
+			answerOptions: [
+				{ answerText: <img className="img-responsive" src={O101}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
+				{ answerText: <img className="img-responsive" src={O102}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
+				{ answerText: <img className="img-responsive" src={O103}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },
+				{ answerText: <img className="img-responsive" src={O104}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				
 			],
 		},
@@ -203,7 +278,7 @@ export default function App() {
 		console.log(id)
 		 setList(list.filter(item => item.questionId!== id));
 		 console.log("len"+list.length)
-		 if(list.length===7){
+		 if(list.length===10){
 			setShowScore(true)
 		}
 	   };
@@ -268,28 +343,30 @@ export default function App() {
     
 			{showScore ? (
 				<div className='score-section'>
-					You scored {score} out of 6
-					<Button onClick={handlePlayAgain} variant="contained" color="primary">Play Again</Button>
+					آپ نے 10 میں سے {score} اسکور کیے ہیں۔
+					<Button onClick={handlePlayAgain} variant="contained" color="primary">دوبارہ کھیلو</Button>
 				</div>
 			) : (
 				<>
 				
 					<div className='question-section'>
 					<div className='question-count'>
-				    <span>Time remaining {min? "0"+min: min}:{sec}</span>
+				    <span>بقیہ وقت {min? "0"+min: min}:{sec}</span>
 					</div>
 						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/6
+							<span>سوال {currentQuestion + 1}</span>/10
 						</div>
+					
 						<div className='question-text'>{list[currentQuestion].questionText}</div>
+						
 					</div>
 					<div className='answer-section'>
 						{list[currentQuestion].answerOptions.map((answerOption, i) => {
-							return <Button key={i} className={clicked === answerOption.answerText ? "btn" : "option"} onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText)}>{answerOption.answerText}</Button>
+							return <Button key={i} sx={{fontSize: 18}} className={clicked === answerOption.answerText ? "btn" : "option"} onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText)}>{answerOption.answerText}</Button>
                      })}
 					</div>
 					<div className='nextBtn'>
-						<Button className='nextBtn'variant="contained" color="success" disabled={!clicked} onClick={()=>{{handleShuffle()}{handleNextOption()}{handleRemoveItem(list[currentQuestion].questionId)}}}> next </Button>
+						<Button className='nextBtn'variant="contained" color="success" disabled={!clicked} onClick={()=>{{handleShuffle()}{handleNextOption()}{handleRemoveItem(list[currentQuestion].questionId)}}}> اگلا </Button>
 					</div>
 					
 				</>

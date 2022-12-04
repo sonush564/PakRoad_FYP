@@ -107,7 +107,7 @@ export default function App() {
 		},
 		{ 
 			questionId: 7,
-			questionText: 'Select the sign of “Tick the sign of “Two-way traffic”  ',
+			questionText: 'Select the sign of “Two-way traffic”  ',
 			answerOptions: [
 				{ answerText: <img className="img-responsive" src={O61}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: false },
 				{ answerText: <img className="img-responsive" src={O62}  alt="logo" width={"70px"} height={"70px"} />, isCorrect: true },

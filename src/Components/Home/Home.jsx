@@ -101,7 +101,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         )}
         {udShown && ( 
         <div className='english' onClick={()=>{udClick()}}>
-        <Button variant='contained' className='englishB' color='success' onClick={changeLanguage("ud")}>اردو</Button>
+        <Button variant='contained' sx={{fontSize: 15}} className='englishB' color='success' onClick={changeLanguage("ud")}>اردو</Button>
         </div>
         )}
         <div>
