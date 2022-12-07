@@ -17,6 +17,8 @@ import { collection, getDocs, addDoc, } from "firebase/firestore";
 import { BouncingBalls } from "react-cssfx-loading";
 import Header from '../Header/Header';
 import areas from './Area'
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 
 export default function ShareRide({changeLanguage, toggleDark, settoggleDark}) {
@@ -63,7 +65,7 @@ const handleChange = (newValue) => {
     
       e.preventDefault();
       const {name, city, area, center, gender,vehcile}=user ;
-      if (( name, city, area, center, gender,vehcile && date, time, phone && phone.length==15)){
+      if (( name, city, area, center, gender,vehcile && date && time && phone && phone.length==15)){
         setBtnShown(false)
         setLoadShown(true)
        const res= await addDoc(userCollectionRef,{name: user.name, phone: phone, date: date, time: time, area: user.area, city: user.city, gender: user.gender, center:user.center, vehcile:user.vehcile})
@@ -79,12 +81,14 @@ const handleChange = (newValue) => {
                 gender: ""
                 });
                 setLoadShown(false)
+                toast.success('Ride Shared Successfully')
                 setBtnShown(true)
+                
                 
                
         }
       }else{
- alert("kindly fill complete form")
+        toast.error('Fill the form completely')
       }  }
 
      
@@ -246,6 +250,7 @@ const handleChange = (newValue) => {
 <div className='submit'>
          <Button color="primary" variant="contained" className='submitB' onClick={postData} >Submit
          </Button>
+         <ToastContainer />
          </div>
     
 						

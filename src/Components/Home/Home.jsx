@@ -13,6 +13,8 @@ import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const Home = ({changeLanguage, toggleDark, settoggleDark} ) => {
   const [udShown, setUdShown] = useState(true);
 const [engShown, setEngShown] = useState(false);
@@ -78,6 +80,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
+  
+
+
+
     return ( 
         <>
         <div className='HomeDiv'>
@@ -113,15 +119,18 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
          color="default" />
         </div>
         </div>
-        <div className="infoButton" onClick={() => {navigate('/RegularDrivingLicense')}}>
-        <Button variant='contained' className='infoB' color='primary' onClick={() => {navigate('/RegularDrivingLicense')}}>{t('infoButton')}</Button>
+        <div className="center_div">
+          <h1 className="learn"> {t('Learn')} </h1>
+          <h2 className="learnM">{t('LearnText1')} </h2>
+          <h3 className="learnN">{t('LearnText2')} </h3>
         </div>
+        
         <div className="HM">
        <HomeMenu/>
        </div>
         </Container>
         <div className='homeText'>
-          <h1>{t('overview')}</h1>
+          <h1 className="over">{t('overview')}</h1>
           <p>{t('hometext')}</p>
         </div>
          

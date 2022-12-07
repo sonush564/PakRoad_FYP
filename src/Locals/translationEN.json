@@ -6,5 +6,13 @@
     "TrafficRuless": "Traffic Ruless",
     "NeedShareRide": "Need / Share a Ride",
     "About": "About Us",
-    "infoButton": "View Info"
+    "infoButton": "View Info",
+    "Learn": "LEARN",
+    "LearnText1":"How driving test ",
+    "LearnText2":"has been held",
+    "Quiz":"Quiz",
+    "Quiz1":"Instructions:",
+    "Quiz2":"You will be asked a few questions and terms related to traffic and safety rules. You have to choose the correct answers to every question, and your final score will be displayed at the end. You have 1 minutes to solve 10 questions. to pass this test you must answer 6 questions right."
+
+    
 }

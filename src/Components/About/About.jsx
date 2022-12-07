@@ -10,6 +10,8 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import LoadingButton from '@mui/lab/LoadingButton';
 import Header from '../Header/Header';
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 const Contact = ({changeLanguage, toggleDark, settoggleDark}) => {
   const form = useRef();
   const [btnShown, setBtnShown] = useState(true);
@@ -47,6 +49,7 @@ if(value){
         (result) => {
             setBtnShown(true);
             setLoadShown(false);
+            toast.success('Submitted')
             setValue('')
             setName('')
             setEmail('')
@@ -59,7 +62,7 @@ if(value){
       );
       }
     else{
-        alert('kindly select the pupose')
+      toast.error('Kindly select the purpose')
     }
   } 
 
@@ -111,6 +114,7 @@ if(value){
         <div className="ASB">
         <Button color="success" type="submit" variant="contained" className='AbSubmit'endIcon={<SendIcon />}>Submit
          </Button>
+         <ToastContainer />
          </div>
          )}
         </div>

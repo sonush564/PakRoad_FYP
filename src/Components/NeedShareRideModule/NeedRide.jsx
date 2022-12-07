@@ -18,7 +18,8 @@ import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import Header from '../Header/Header';
 import areas from './Area'
-
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
   const [input, setInput]= useState([]);
   const [date, setDate] = useState("");
@@ -52,7 +53,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
 }, [])
   const handleFilter=(center, area, gender, vehcile, date)=>{
     
-    if (( area, center, gender,vehcile,date)){
+    if (( area && center&& gender&&vehcile&&date)){
       const filterResult=search.filter(item=>{   
         return item.center===center&&item.area===area&&item.gender===gender&&item.vehcile===vehcile&&new Date(item.date.seconds*1000).toDateString()===date. toDateString()   
       })
@@ -61,7 +62,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
       setInput(filterResult) 
     }
     else{
-      alert("kindly fill complete form")
+      toast.error('Fill the form completely')
     }
   } 
     return ( 
@@ -168,6 +169,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
 <div className='submitN'>
          <Button color="primary" variant='contained' className='searchButton'  onClick={()=>{handleFilter(user.center, user.area, user.gender,user.vehcile, date) }}> Search
          </Button>
+         <ToastContainer />
          </div>
          
 </div>

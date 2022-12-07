@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import Button from '@mui/material/Button';
+import { AiFillCloseCircle } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 import NewLogo from '../../Images/NewLogo.png';
 import noright from '../../Signs/noright.jpg';
 import O1 from '../../../QuestionsSigns/Q1/O1.png'
@@ -250,6 +252,7 @@ export default function App() {
 	const [sec, setSec] = useState(59);
     const [min, setMin] = useState(0);
 	const [m, setM] = useState(0);
+	const navigate = useNavigate();
 	
 	var timer;
 	useEffect(()=>{
@@ -332,7 +335,7 @@ export default function App() {
 
 	return (
 		<div className='app'>
-			
+			< AiFillCloseCircle className='croos2' onClick={()=>{{navigate('/Quiz')}}}/>
       <img width="90px"
         height="90px"
         style={{ float: "left", marginTop: "15px" }}

@@ -6,12 +6,14 @@ import bulb from '../../Images/bulb.png'
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { useTranslation, initReactI18next } from "react-i18next";
 
 
 const Quiz = ({changeLanguage, toggleDark, settoggleDark}) => {
   const navigate = useNavigate();
   const [lanDiv, setLanDive] = useState(false);
   const [lnDiv, setLnDive] = useState('');
+  const {t, il8n}= useTranslation();
 
     return ( 
         <> 
@@ -19,11 +21,9 @@ const Quiz = ({changeLanguage, toggleDark, settoggleDark}) => {
         <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
         </div>
         <div className={lnDiv}>      
-      <h1 id='LP'> Quiz</h1>
-      <h2 style={{float:"left"}}>Instructions:</h2>
-      <p style={{float:"left", marginLeft:"170px",textAlign:"left", fontSize:"25px"}}>You will be asked a few questions and terms related to traffic and safety rules.
-      You have to choose the correct answers to every question, and your final score will be displayed at the end.
-      You have 2 minutes to solve 10 questions. to pass this test you must answer 6 questions right.</p>
+      <h1 id='LP'> {t('Quiz')}</h1>
+      <h2 style={{float:"left"}}>{t('Quiz1')}</h2>
+      <p style={{float:"left", marginLeft:"170px",textAlign:"left", fontSize:"25px"}}>{t('Quiz2')}.</p>
       </div>
       {lanDiv && ( 
       <div className='quizLan'>

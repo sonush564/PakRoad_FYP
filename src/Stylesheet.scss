@@ -4,6 +4,7 @@
  @import url('https://fonts.cdnfonts.com/css/catamaran');
  
 @import url('https://fonts.cdnfonts.com/css/poppins');
+
 *{
     margin-top: 0;
     padding: 0;
@@ -228,10 +229,7 @@
   border-radius: 5px;
 
   }
-  #homemenu{
-    margin-top: 18%;
-    width: 100%;
-    }
+ 
   #hnavbarScrollingDropdown{
     margin-top: 25px;
     color: white;
@@ -405,10 +403,6 @@ margin-right:5%
         margin-top: 25%;
         width: fit-content;
         width: 100%;
-      }
-      #homemenu{
-      margin-top: 26.5%;
-      width: 100%;
       }
       #hmenu{
         background-color:white;
@@ -623,6 +617,14 @@ margin-right:5%
     margin-top: -40px;
     width: 100px;
     height: 40px;
+  }
+  .croos2{
+    margin-left: 600px;
+    position: absolute;
+    margin-top: -45px;
+    width: 100px;
+    height: 40px;
+   
   }
   .bb{
     color: white;
@@ -950,7 +952,10 @@ margin-right:5%
  
  }
  .HM{
-  margin-top: -415px;
+  margin-top: 70px;
+  bottom: 0px;
+  left: 50px;
+
  }
  .aheader{
   width: 1366px;
@@ -958,3 +963,75 @@ margin-right:5%
   margin-right: -99px;
   margin-top: -60px;
  }
+ .center_div{
+  
+  
+  display: grid;
+  place-items: center;
+}
+.learn{
+  color: #4589ff;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  top: 200px;
+  left: 480px;
+
+}
+.learn::before{
+  content: "LEARN";
+  width: 0%;
+  color: #360568;
+  position: absolute;
+  top: 0;
+  animation: slide 5s linear ;
+  -webkit-animation: slide 5s linear ;
+  overflow: hidden;
+}
+.learnM{
+  color: #360568;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  top: 200px;
+  left: 540px;
+  text-align: justify;
+
+}
+.learnN{
+  color: #360568;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  top: 200px;
+  left: 510px;
+  text-align: justify;
+
+}
+@keyframes slide{
+  0%{
+    width: 0%;
+  }
+  50%{
+    width: 100%;
+  }
+  100%{
+    width: 0%;
+  }
+}
+.homeText{
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: large;
+}
+.over{
+  text-align: center;
+  color: #360568;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
