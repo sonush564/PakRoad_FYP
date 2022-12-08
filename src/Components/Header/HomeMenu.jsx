@@ -8,8 +8,9 @@ import { useTranslation, initReactI18next } from "react-i18next";
 const HomeMenu = () => {
   const navigate = useNavigate();
   const {t, il8n}= useTranslation();
+  const [multiD, setMultiD] = React.useState('');
   const [isHovering, setIsHovering] = React.useState(false);
-
+  let url = "https://dlims.punjab.gov.pk/track/"
   const handleMouseOver = () => {
     setIsHovering(true);
   };
@@ -30,10 +31,8 @@ const HomeMenu = () => {
         <NavDropdown.Item onClick={() => navigate('/RegularDrivingLicense')} >Regular Driving License </NavDropdown.Item>
         <NavDropdown.Item onClick={() => navigate('/InternationDrivingLicense')}>International Driving License</NavDropdown.Item>
         <NavDropdown.Item onClick={() => navigate('/DrivingLicenseRenewal')}>Driving License Renewal</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/DuplicateDrivingLicense')}>Duplicate Driving License</NavDropdown.Item>      
-        <a href="https://dlims.punjab.gov.pk/track/" id='tls' target="_blank">
-          Track License Status
-        </a>
+        <NavDropdown.Item onClick={() => navigate('/DuplicateDrivingLicense')}>Duplicate Driving License</NavDropdown.Item> 
+        <NavDropdown.Item onClick={() => { window.location.href = url; } } >   Track License Status</NavDropdown.Item>        
         
    
        </NavDropdown>   
@@ -49,14 +48,15 @@ const HomeMenu = () => {
 
         <Container id='hmenu' >
         <NavDropdown title={t('TrafficRuless')} id="hnavbarScrollingDropdown">
-         
-        <NavDropdown.Item onClick={() =>{ navigate('/Sign')}} onMouseEnter={handleMouseOver} onMouseOut={handleMouseOut} >Signs</NavDropdown.Item> 
-        {isHovering && (
-        <div onMouseOut={handleMouseOut}>
-        <NavDropdown.Item >warning signs</NavDropdown.Item>
-        <NavDropdown.Item >Important signs</NavDropdown.Item>
+        <NavDropdown onClick={() =>{ {setMultiD('impDiv')}}} title='Signs'  >
+          <div className='multiDrop'>
+        <NavDropdown.Item onClick={() =>{ navigate('/Sign')}} >Warning Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Regulatory Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Mandatory Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Important Signs</NavDropdown.Item>
         </div>
-          )}
+        </NavDropdown> 
+        
         
              
         <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Important Information</NavDropdown.Item>

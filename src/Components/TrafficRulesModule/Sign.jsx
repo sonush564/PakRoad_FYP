@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import {Container} from 'react-bootstrap';
 import Header from '../Header/Header';
 import Footer from '../Header/Footer';
-import Danger from '../Signs/Danger.jpg';
-import Falling from '../Signs/Falling.jpg';
-import Hump from '../Signs/Hump.jpg';
-import LeftRight from '../Signs/LeftRight.jpg';
-import Signal from '../Signs/Signal.jpg';
-import TwoWay from '../Signs/TwoWay.jpg';
+import Danger from '../Signs/Danger.png';
+import Falling from '../Signs/Falling.png';
+import Hump from '../Signs/Hump.png';
+import LeftRight from '../Signs/LeftRight.png';
+import Signal from '../Signs/Signal.png';
+import TwoWay from '../Signs/TwoWay.png';
+import animals from '../Signs/animals.png';
+import Stop from '../Signs/Stop.png';
+import NoParking from '../Signs/NoParking.png';
 import Info from '../Images/Info.png'
-
 const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
     const [sign, setSign] = useState({
@@ -19,6 +21,9 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
       roadHump: false,
       risk: false,
       signal: false,
+      animal: false,
+      worker:false,
+      uneven:false
 
       });
       const allFalse=()=>{
@@ -29,6 +34,9 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
       roadHump: false,
       risk: false,
       signal: false,
+      animal: false,
+      worker:false,
+      uneven:false
       })
       }
     return ( 
@@ -77,7 +85,7 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <h6 style={{float:"left", marginLeft:"130px"}}>Road Hump </h6>
      <div onMouseEnter={()=> setSign({roadHump:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Traffic coming from opposite direction too <br/>Be Alert</p>)}
+     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Reduce Your speed there is a Hump ahead and Be Alert</p>)}
      </div>
      </div>
       </Container>
@@ -90,7 +98,7 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <h6 style={{float:"left", marginLeft:"130px"}}>Risk of Falling </h6>
      <div  onMouseEnter={()=> setSign({risk:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Traffic coming from opposite direction too <br/>Be Alert</p>)}
+     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Risk of falling rocks/land sliding or anything from above so Be Alert</p>)}
      </div>
      </div>
      </Container>
@@ -104,41 +112,41 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <h6 style={{float:"left", marginLeft:"130px"}}>Traffic signal </h6>
      <div onMouseEnter={()=> setSign({signal:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Traffic coming from opposite direction too <br/>Be Alert</p>)}
+     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>slow down and be prepared to stop if necessary a special situation or hazard is ahead.</p>)}
      </div>
      </div>
      </Container>
 
 
-     <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={Signal}  alt="logo" />
+     <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={animals}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"130px"}}>Traffic signal </h6>
-     <div  onMouseEnter={()=> setSign({signal:true})}>
+     <h6 style={{float:"left", marginLeft:"130px"}}> Animals Ahead </h6>
+     <div  onMouseEnter={()=> setSign({animal:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Traffic coming from opposite direction too <br/>Be Alert</p>)}
+     {sign.animal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>WILD ANIMALS LIKELY TO BE IN ROAD AHEAD <br/>Be Alert</p>)}
      </div>
      </div>
      </Container>
 
 
-     <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={Signal}  alt="logo" />
+     <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={Stop}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"130px"}}>Traffic signal </h6>
-     <div onMouseEnter={()=> setSign({signal:true})}>
+     <h6 style={{float:"left", marginLeft:"130px"}}>Road Works Ahead</h6>
+     <div onMouseEnter={()=> setSign({worker:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Traffic coming from opposite direction too <br/>Be Alert</p>)}
+     {sign.worker&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Road Works or temporary obstruction of the carriageway ahead</p>)}
      </div>
      </div>
      </Container>
 
 
 
-     <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={Signal}  alt="logo" />
+     <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={NoParking}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"130px"}}>Traffic signal </h6>
-     <div  onMouseEnter={()=> setSign({signal:true})}>
+     <h6 style={{float:"left", marginLeft:"130px"}}>Uneven Road </h6>
+     <div  onMouseEnter={()=> setSign({uneven:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Traffic coming from opposite direction too <br/>Be Alert</p>)}
+     {sign.uneven&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>UNEVEN ROAD AHEAD <br/>Be Alert</p>)}
      </div>
      </div>
      </Container>

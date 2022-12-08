@@ -40,6 +40,7 @@ export default function ShareRide({changeLanguage, toggleDark, settoggleDark}) {
 const handleChange = (newValue) => {
     setDate(newValue);
   };
+  
   const handleChange1 = (newValue) => {
       setTime(newValue);
     };
@@ -55,9 +56,13 @@ const handleChange = (newValue) => {
 
       let name,val
   const getUser=(event)=>{
+    const re = /^[A-Za-z- -]+$/;
  name= event.target.name;
  val= event.target.value;
- setUser({ ...user, [name]: val})
+ if(re.test(val)){
+  setUser({ ...user, [name]: val})
+ }
+ 
   }
   
   const postData= async(e)=>{
@@ -80,8 +85,8 @@ const handleChange = (newValue) => {
                 center: "",
                 gender: ""
                 });
-                setLoadShown(false)
                 toast.success('Ride Shared Successfully')
+                setLoadShown(false)
                 setBtnShown(true)
                 
                 
@@ -140,6 +145,7 @@ const handleChange = (newValue) => {
          </div>
          <div className='area1'>
          <TimePicker
+          disablePast
           label="Time"
           value={time}
           onChange={handleChange1}
@@ -250,6 +256,7 @@ const handleChange = (newValue) => {
 <div className='submit'>
          <Button color="primary" variant="contained" className='submitB' onClick={postData} >Submit
          </Button>
+         <ToastContainer />
          <ToastContainer />
          </div>
     

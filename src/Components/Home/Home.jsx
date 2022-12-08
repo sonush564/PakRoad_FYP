@@ -20,6 +20,7 @@ const Home = ({changeLanguage, toggleDark, settoggleDark} ) => {
 const [engShown, setEngShown] = useState(false);
   const {t, il8n}= useTranslation();
   const navigate = useNavigate();
+  let url = 'https://rasta.punjab.gov.pk/rasta_public/'
  const engClick=()=>{
 
  setEngShown(false);
@@ -123,6 +124,9 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
           <h1 className="learn"> {t('Learn')} </h1>
           <h2 className="learnM">{t('LearnText1')} </h2>
           <h3 className="learnN">{t('LearnText2')} </h3>
+          <div className="apButton">
+          <Button variant='contained' sx={{fontSize: 20}} color="primary" className="aButton" onClick={() => { window.location.href = url; } }>{t('AppointmentB')}</Button>
+          </div>
         </div>
         
         <div className="HM">
@@ -135,23 +139,23 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         </div>
          
 <Container fluid id='divs'>
-  <div id='div1'>
+  <div id='div1' onClick={() => navigate('/RegularDrivingLicense')}>
     <img id='img1' className="img-responsive"src={licence}alt="logo" />
-    <h4 id='info1'> License Information</h4>
-    <h6 id='info1o1'> Read More </h6>
+    <h4 id='info1'> {t('Div1')}</h4>
+    <h5 id='info1o1'> {t('Div123')} </h5>
 
      </div>
      <a href="https://dlims.punjab.gov.pk/track/" id='tls' target="_blank">
   <div id='div2'>
     <img id='img2' className="img-responsive"src={verification}alt="logo" />
-    <h4 id='info2'> License Verfication</h4>
-    <h6 id='info2o1'> Read More </h6>
+    <h4 id='info2'> {t('Div2')}</h4>
+    <h5 id='info2o1'> {t('Div123')} </h5>
     </div>
     </a>
-  <div id='div3'>
+  <div id='div3' onClick={() => navigate('/testcenters')}>
     <img id='img3' className="img-responsive"src={testcenter}alt="logo" />
-    <h4 id='info3'> Test Centers</h4>
-    <h6 id='info3o1'> Read More </h6>
+    <h4 id='info3'> {t('Div3')}</h4>
+    <h5 id='info3o1'> {t('Div123')} </h5>
     </div>
 
   </Container>

@@ -12,7 +12,12 @@
     "LearnText2":"has been held",
     "Quiz":"Quiz",
     "Quiz1":"Instructions:",
-    "Quiz2":"You will be asked a few questions and terms related to traffic and safety rules. You have to choose the correct answers to every question, and your final score will be displayed at the end. You have 1 minutes to solve 10 questions. to pass this test you must answer 6 questions right."
+    "Quiz2":"You will be asked a few questions and terms related to traffic and safety rules. You have to choose the correct answers to every question, and your final score will be displayed at the end. You have 1 minutes to solve 10 questions. to pass this test you must answer 6 questions right.",
+    "AppointmentB":"Book My Appointment",
+    "Div1":"License Information",
+    "Div2":"License Verfication",
+    "Div3":"Test Centers",
+    "Div123":"Read More"
 
     
 }

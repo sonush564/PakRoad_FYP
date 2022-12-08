@@ -252,6 +252,7 @@ export default function App() {
 	const [sec, setSec] = useState(59);
     const [min, setMin] = useState(0);
 	const [m, setM] = useState(0);
+	const [pass, setPass] = useState('pass');
 	const navigate = useNavigate();
 	
 	var timer;
@@ -283,6 +284,10 @@ export default function App() {
 		 console.log("len"+list.length)
 		 if(list.length===10){
 			setShowScore(true)
+		}
+		if(score<6){
+			setPass('Fail')
+
 		}
 	   };
 	const handleAnswerOptionClick = (isCorrect, e) => {
@@ -333,6 +338,7 @@ export default function App() {
 	setShowScore(false)
 }
 
+
 	return (
 		<div className='app'>
 			
@@ -347,8 +353,12 @@ export default function App() {
     
 			{showScore ? (
 				<div className='score-section'>
-					You scored {score} out of 10
+					<div className='playagainT'>
+					{pass}!! You scored {score} out of 10
+					</div>
+					<div className='playagainB'>
 					<Button onClick={handlePlayAgain} variant="contained" color="primary">Play Again</Button>
+					</div>
 				</div>
 			) : (
 				<>

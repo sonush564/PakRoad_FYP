@@ -10,15 +10,10 @@ import { useTranslation, initReactI18next } from "react-i18next";
 const Menubar = () => {
   const navigate = useNavigate();
   const {t, il8n}= useTranslation();
-  const [isHovering, setIsHovering] = React.useState(false);
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
+  const [multiD, setMultiD] = React.useState('');
+  
+  let url = "https://dlims.punjab.gov.pk/track/"
+ 
     return (
          <Container fluid id='mainmenu'>
         <Navbar expand="lg" className="border-0 "style={{fontSize:"20px", width:"100%"}}>
@@ -33,16 +28,7 @@ const Menubar = () => {
         <NavDropdown.Item onClick={() => navigate('/InternationDrivingLicense')}>International Driving License</NavDropdown.Item>
         <NavDropdown.Item onClick={() => navigate('/DrivingLicenseRenewal')}>Driving License Renewal</NavDropdown.Item>
         <NavDropdown.Item onClick={() => navigate('/DuplicateDrivingLicense')}>Duplicate Driving License</NavDropdown.Item>
-
-        
-        
-        
-        
-
-        
-        <a href="https://dlims.punjab.gov.pk/track/" id='tls' target="_blank">
-          Track License Status
-        </a>
+        <NavDropdown.Item onClick={() => { window.location.href = url; } } >   Track License Status</NavDropdown.Item>  
         
    
        </NavDropdown>   
@@ -57,17 +43,16 @@ const Menubar = () => {
         </Container>
         <div class="vl"></div>
         <Container id='menu' >
-        <NavDropdown title={t('TrafficRuless')} id="navbarScrollingDropdown"> 
-        <NavDropdown.Item onClick={() =>{ navigate('/Sign')}} onMouseEnter={handleMouseOver} onMouseOut={handleMouseOut} >Signs</NavDropdown.Item> 
-        {isHovering && (
-        <div onMouseOut={handleMouseOut}>
-        <NavDropdown.Item >warning signs</NavDropdown.Item>
-        <NavDropdown.Item >Important signs</NavDropdown.Item>
+        <NavDropdown title={t('TrafficRuless')} onClick={() =>{{setMultiD('')}}} id="navbarScrollingDropdown"> 
+        <NavDropdown onClick={() =>{{setMultiD('impDiv')}}} title='Signs'  >
+          <div className='multiDrop'>
+        <NavDropdown.Item onClick={() =>{ navigate('/Sign')}} >Warning Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Regulatory Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Mandatory Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Important Signs</NavDropdown.Item>
         </div>
-          )}
-        
-             
-        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Important Information</NavDropdown.Item>
+        </NavDropdown>      
+        <NavDropdown.Item className={multiD} onClick={() =>{ navigate('/ImportantInformation')}} >Important Information</NavDropdown.Item>
         </NavDropdown>        
         </Container>
        

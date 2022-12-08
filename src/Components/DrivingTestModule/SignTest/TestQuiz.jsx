@@ -253,7 +253,7 @@ export default function App() {
     const [min, setMin] = useState(0);
 	const [m, setM] = useState(0);
 	const navigate = useNavigate();
-	
+	const [pass, setPass] = useState('پاس');
 	var timer;
 	useEffect(()=>{
 		timer=setInterval(()=>{
@@ -283,6 +283,9 @@ export default function App() {
 		 console.log("len"+list.length)
 		 if(list.length===10){
 			setShowScore(true)
+		}
+		if(score<6){
+			setPass('ناکام')
 		}
 	   };
 	const handleAnswerOptionClick = (isCorrect, e) => {
@@ -346,8 +349,12 @@ export default function App() {
     
 			{showScore ? (
 				<div className='score-section'>
-					آپ نے 10 میں سے {score} اسکور کیے ہیں۔
-					<Button onClick={handlePlayAgain} variant="contained" color="primary">دوبارہ کھیلو</Button>
+					<div className='playagainT'>
+					{pass}!! آپ نے 10 میں سے {score} اسکور کیے ہیں۔
+					</div>
+					<div className='playagainB' >
+					<Button sx={{fontSize: 18}} onClick={handlePlayAgain}  variant="contained" color="primary">دوبارہ کھیلو</Button>
+					</div>
 				</div>
 			) : (
 				<>

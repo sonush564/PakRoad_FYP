@@ -189,9 +189,10 @@
     float: left;
     color: black;
     font-weight: bold;
-    border-radius: 15px;
-    width: 100px;
+    border-radius: 5px;
+    width: 110px;
   height: 40px;
+  margin-left: 15px;
   }
   #formpic{
     width: 23px;
@@ -206,6 +207,7 @@
     margin-left: 15px;
     font-weight: lighter;
     color: black;
+    cursor: pointer;
   }
   #infoR{
     float: left;
@@ -307,6 +309,7 @@ margin-right:5%
   #div1:hover{
     background-color:#4589ff;
     color: black;
+    cursor: pointer;
   }
   #div2{
     background-color: #360568;
@@ -321,6 +324,7 @@ margin-right:5%
     #div2:hover{
       background-color: #4589ff;
       color: black;
+      cursor: pointer;
     }
     
     #div3{
@@ -335,6 +339,7 @@ margin-right:5%
     #div3:hover{
       background-color: #4589ff ;
       color: black;
+      cursor: pointer;
     }
     
     @media(max-width: 800px){
@@ -443,10 +448,7 @@ margin-right:5%
       float: left;
       margin-left: 7s5px;
      }
-     #info1o1{
-      margin-top:20px ;
-      margin-right: 100px;
-     }
+    
      #info2{
       margin-right: 25px;
      }
@@ -458,10 +460,7 @@ margin-right:5%
       margin-left: 20px;
       margin-top: 2px;
      }
-     #info3o1{
-      margin-top: 10px;
-      margin-left: 20px;
-     }
+     
      #hmenu{
       height:40px;
       margin-top: 0%;
@@ -952,7 +951,8 @@ margin-right:5%
  
  }
  .HM{
-  margin-top: 70px;
+  margin-top: 140px;
+  z-index: 1;
   bottom: 0px;
   left: 50px;
 
@@ -965,7 +965,7 @@ margin-right:5%
  }
  .center_div{
   
-  
+  margin-top: -70px;
   display: grid;
   place-items: center;
 }
@@ -1034,4 +1034,48 @@ margin-right:5%
   font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+.apButton{
+  position: absolute;
+  margin-top: 670px;
+  margin-left: 980px;
+  z-index: 3;
+}
+.aButton{
+  width: 250px;
+  height: 70px;
+}
+.centerTable{
+  width: fit-content;
+}
+.headerTable{
+  margin-left: -57px;
+ width: 109%;
+}
+.playagainB{
+  margin-top: 100px;
+  margin-left: -200px;
+}
+
+.playagainT{
+  margin-left: 0px;
+
+}
+.tableee{
+  margin-top: 30px;
+  width: 750px;
+}
+.tableeR{
+  margin-top: 30px;
+  width: 700px;
+}
+.needRideHeader{
+margin-right: 80px;
+  width: 100%;
+}
+.multiDrop{
+  width: 180px;
+}
+.impDiv{
+  margin-top: 150px;
 }

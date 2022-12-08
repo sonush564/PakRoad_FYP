@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Container, Navbar} from 'react-bootstrap';
-import NewLogo from '../Images/NewLogo.png';
+import NewLogo1 from '../Images/NewLogo1.png';
 import { MDBCol, MDBInput } from "mdbreact";
 import Menubar from '../Header/Menubar';
 import { useNavigate } from 'react-router-dom';
@@ -66,7 +66,7 @@ const Header = ({changeLanguage, toggleDark, settoggleDark}) => {
         height="90px"
         style={{ float: "left", marginTop: "15px" }}
         className="img-responsive"
-        src={NewLogo}
+        src={NewLogo1}
         onClick={() => navigate('/')}
         alt="logo" />
     </Navbar.Brand>

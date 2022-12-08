@@ -67,7 +67,9 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
   } 
     return ( 
       <>
+      <div className='needRideHeader'>
        <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
+       </div>
       <div id='needridee'>
            <center>   <h1 > Need a Ride</h1> </center>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
