@@ -19,7 +19,8 @@ import Header from '../Header/Header';
 import areas from './Area'
 import { ToastContainer, toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
-
+import { ReactNotifications } from 'react-notifications-component'
+import { Store } from 'react-notifications-component';
 
 export default function ShareRide({changeLanguage, toggleDark, settoggleDark}) {
     const userCollectionRef=collection(db,"user");
@@ -85,9 +86,21 @@ const handleChange = (newValue) => {
                 center: "",
                 gender: ""
                 });
-                toast.success('Ride Shared Successfully')
                 setLoadShown(false)
                 setBtnShown(true)
+                Store.addNotification({
+                  title: "Wonderful!",
+                  message: "Ride Shared Successfully",
+                  type: "success",
+                  insert: "top",
+                  container: "bottom-center",
+                  animationIn: ["animate__animated", "animate__fadeIn"],
+                  animationOut: ["animate__animated", "animate__fadeOut"],
+                  dismiss: {
+                    duration: 5000,
+                    onScreen: true
+                  }
+                });
                 
                 
                
@@ -100,6 +113,7 @@ const handleChange = (newValue) => {
   return (
     
     <> 
+    <ReactNotifications />
   <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
     <div className='shareRideBg'>
        

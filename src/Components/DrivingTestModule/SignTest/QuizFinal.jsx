@@ -357,7 +357,7 @@ export default function App() {
 					{pass}!! You scored {score} out of 10
 					</div>
 					<div className='playagainB'>
-					<Button onClick={handlePlayAgain} variant="contained" color="primary">Play Again</Button>
+					<Button onClick={handlePlayAgain} variant="contained" color="primary">Try Again</Button>
 					</div>
 				</div>
 			) : (

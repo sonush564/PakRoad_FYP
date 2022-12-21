@@ -2,7 +2,7 @@
   @import
  url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css); 
  @import url('https://fonts.cdnfonts.com/css/catamaran');
- 
+ @import 'react-notifications-component/dist/theme.css';
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 *{
@@ -159,11 +159,17 @@
   .clear { clear: both; height: 100px; }
   
   #banner{
-  background-image: url(./Components/Images/WhiteBanner.jpeg);
+  background-image: url(./Components/Images/WhiteBanner.png);
   background-size: cover;
   height: 650px;
   }
- 
+  #rS:hover{
+    color: #4589ff;
+  }
+  #rS{
+    text-decoration: underline;
+    color: #4589ff;
+  }
   .HomeDiv{
     height: 1300px;
   }
@@ -423,15 +429,15 @@ margin-right:5%
       }
      
   #banner{
-    background-image: url(./Components/Images/WhiteBanner.jpeg);
+    background-image: url(./Components/Images/WhiteBanner.png);
     background-size: cover;
     height: 200px;
   }
     #img1{
       width: 300px;
       height: 80px;
-      margin-top: 100px; 
-      margin-right: 505px; 
+      margin-top: 10px; 
+      margin-right: 55px; 
      }
      #img2{
       width: 100px;
@@ -475,6 +481,12 @@ margin-right:5%
     margin-top: 80px; 
     margin-right: 55px; 
    }
+   #img11{
+    width: 100px;
+    height: 80px;
+    margin-top: 80px; 
+    margin-right: 80px; 
+   }
    #img2{
     width: 100px;
     height: 80px;
@@ -491,8 +503,8 @@ margin-right:5%
     margin-left: 55px;
    }
    #info1o1{
-    margin-top:20px ;
-    margin-right: 80px;
+    margin-top:25px ;
+    margin-right: 135px;
    }
    #info2{
     margin-right: 25px;
@@ -963,6 +975,13 @@ margin-right:5%
   margin-right: -99px;
   margin-top: -60px;
  }
+ .a1header{
+  width: 1366px;
+  height: 260px;
+  margin-left: -100px;
+  margin-right: -99px;
+  margin-top: -60px;
+ }
  .center_div{
   
   margin-top: -70px;
@@ -970,6 +989,16 @@ margin-right:5%
   place-items: center;
 }
 .learn{
+  color: #4589ff;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  top: 200px;
+  left: 480px;
+
+}
+.learnn{
   color: #4589ff;
   font-size: 4rem;
   font-weight: bolder;
@@ -989,6 +1018,16 @@ margin-right:5%
   -webkit-animation: slide 5s linear ;
   overflow: hidden;
 }
+.learnn::before{
+  content: "سیکھیں";
+  width: 0%;
+  color: #360568;
+  position: absolute;
+  top: 0;
+  animation: slide 5s linear ;
+  -webkit-animation: slide 5s linear ;
+  overflow: hidden;
+}
 .learnM{
   color: #360568;
   font-size: 2rem;
@@ -996,7 +1035,7 @@ margin-right:5%
   text-transform: uppercase;
   position: relative;
   top: 200px;
-  left: 540px;
+  left: 490px;
   text-align: justify;
 
 }
@@ -1007,7 +1046,7 @@ margin-right:5%
   text-transform: uppercase;
   position: relative;
   top: 200px;
-  left: 510px;
+  left: 480px;
   text-align: justify;
 
 }
@@ -1028,6 +1067,13 @@ margin-right:5%
   margin-right: 25px;
   font-size: large;
 }
+.homeText1{
+  text-align: justify;
+  margin-top: 360px;
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: large;
+}
 .over{
   text-align: center;
   color: #360568;
@@ -1038,7 +1084,7 @@ margin-right:5%
 .apButton{
   position: absolute;
   margin-top: 670px;
-  margin-left: 980px;
+  margin-left: 1000px;
   z-index: 3;
 }
 .aButton{
@@ -1046,11 +1092,12 @@ margin-right:5%
   height: 70px;
 }
 .centerTable{
-  width: fit-content;
+  width: 90%;
+  margin-left: 5%;
 }
 .headerTable{
-  margin-left: -57px;
- width: 109%;
+ 
+ width: 100%;
 }
 .playagainB{
   margin-top: 100px;
@@ -1078,4 +1125,51 @@ margin-right: 80px;
 }
 .impDiv{
   margin-top: 150px;
+}
+.Wtext{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}
+#footer{
+  float: left;
+ background-color:#360568;
+margin-top: 30px;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+}
+#footermaindiv{
+ height: 250px;
+
+ float: left;
+ width: 50%;
+ margin-left: -19px;
+}
+#footerhead{
+ float: left;
+ margin-top: 50px;
+ margin-left: 5px;
+ color: white;
+}
+#footerdata{
+ float: left;
+ margin-top: 0.3%;
+ margin-left: 14%;
+ text-align: left;
+ color: white;
+ text-align: justify;
+ font-family: sans-serif;
+ font-weight: 10;
+}
+#dforms:hover{
+  color: #06339c;
+  cursor:pointer;
+}
+#dforms{
+  color: white;
+  margin-left: 70px;
+  text-decoration: underline;
+  text-align: justify;
+
 }

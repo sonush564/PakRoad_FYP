@@ -18,17 +18,23 @@ import { useNavigate } from 'react-router-dom';
 const Home = ({changeLanguage, toggleDark, settoggleDark} ) => {
   const [udShown, setUdShown] = useState(true);
 const [engShown, setEngShown] = useState(false);
+const [learn, setLearn] = useState('learn');
+const [img, setImg] = useState('img1');
   const {t, il8n}= useTranslation();
   const navigate = useNavigate();
   let url = 'https://rasta.punjab.gov.pk/rasta_public/'
  const engClick=()=>{
 
  setEngShown(false);
- setUdShown(true)
+ setUdShown(true);
+ setLearn('learn');
+
  }
  const udClick=()=>{
  setEngShown(true);
- setUdShown(false)
+ setUdShown(false);
+ setLearn('learnn');
+ setImg('img11')
 
  }
  const handleModeChange = () => {
@@ -121,7 +127,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         </div>
         </div>
         <div className="center_div">
-          <h1 className="learn"> {t('Learn')} </h1>
+          <h1 className={learn}> {t('Learn')} </h1>
           <h2 className="learnM">{t('LearnText1')} </h2>
           <h3 className="learnN">{t('LearnText2')} </h3>
           <div className="apButton">
@@ -140,7 +146,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
          
 <Container fluid id='divs'>
   <div id='div1' onClick={() => navigate('/RegularDrivingLicense')}>
-    <img id='img1' className="img-responsive"src={licence}alt="logo" />
+    <img id={img} className="img-responsive"src={licence}alt="logo" />
     <h4 id='info1'> {t('Div1')}</h4>
     <h5 id='info1o1'> {t('Div123')} </h5>
 
@@ -159,6 +165,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     </div>
 
   </Container>
+  <div className='homeText1'>
+
+          <p>{t('hometext1')}</p>
+        </div>
 <Footer/>
 </div>
     </>

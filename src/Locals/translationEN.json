@@ -1,6 +1,8 @@
 {
     "overview": "Overview",
-    "hometext": "lice in Punjab has two main components under the current command & control structure. Traffic wardens with grayish blue uniform are performing traffic management in the five City districts i.e. Lahore, Rawalpindi, Faisalabad, Multan & Gujranwala and have been notified as Punjab Traffic Warden Service. Traffic Police Punjab with white shirt & blue trousers are performing duties in the remaining 31 districts. An officer of SSP rank known as Chief Traffic Officer (CTO) is the incharge of Traffic Police in City districts Rawalpindi, Faisalabad, Multan & Gujranwala, and are under the operational control of their respective CPOs, whereas in Lahore it is under the administrative and operational control of CCPO Lahore. In the ramaining 9 Regions of Punjab, one SP is supervising Traffic in each Region and is known as SP Traffic Region, whereas an ASP/DSP is posted in each district as Incharge Traffic district, who is administratively answerable to the respective SP Traffic Region but is under the operational control of DPO concerned. DIG of Police Traffic Punjab is looking after the operational matters of Traffic Regions of Punjab under the command of Addl. IGP Traffic stationed at Traffic Hqrs. Qurban Lines Lahore.",
+    "hometext": "When somebody gets ready to drive for the very first time on road, one needs to take many lessons about the road. The most common things the student driver will need are license, enrollment in a driving school, road familiarization, traffic rule tests and road ethics. Out of all this one fundamental element of driving arises which should always be taken seriously is the comprehensive knowledge on road or traffic signs. Every good driver must have the good knowledge of these signs. Every person, he may be a passenger, driver, pedestrian would have noticed along the roadside various sign boards that serve important purposes. These important road paraphernalia helps us as route guides, warning and traffic regulator. As control devices for traffic, signs need full attention, respect and adequate driver's response.    ",
+    "hometext1":"Road signs are placed beside or above the highways or streets. If the positioning of the signs is not supported by any visual considerations or expert reasons, these may become destructive rather than effective means of guiding the motorists. Traffic signs or road signs are signs erected at the side of road to provide information to road users. Pictorial signs are used as symbols in place of words and are usually a result of international standards. We have consolidated the all Road signs - Mandatory; Cautionary and Informatory and have given brief about each sign. This will be a very useful guide for learners and other road users. It is expected that after going through this subject, one would obviously be more road friendly and wise citizen.    ",
+    
     "DrivingLicenceInformation": "Driving Licence Information",
     "DrivingTestPractice": "Driving Test Practice",
     "TrafficRuless": "Traffic Ruless",
@@ -8,8 +10,8 @@
     "About": "About Us",
     "infoButton": "View Info",
     "Learn": "LEARN",
-    "LearnText1":"How driving test ",
-    "LearnText2":"has been held",
+    "LearnText1":"How driving",
+    "LearnText2":"test is held",
     "Quiz":"Quiz",
     "Quiz1":"Instructions:",
     "Quiz2":"You will be asked a few questions and terms related to traffic and safety rules. You have to choose the correct answers to every question, and your final score will be displayed at the end. You have 1 minutes to solve 10 questions. to pass this test you must answer 6 questions right.",
@@ -17,7 +19,30 @@
     "Div1":"License Information",
     "Div2":"License Verfication",
     "Div3":"Test Centers",
-    "Div123":"Read More"
+    "Div123":"Read More",
+    "f1":"PakRoad Information Portal",
+    "f2":"To enhance the quality of life and well being of all people in the capital city Punjab by contributing to making our place safer and secure, without  the fear of crime and violence.",
+    "ff1":"Regular Driving License Form",
+    "ff2":"International Driving License Form",
+    "ff3":"Driving License Renewal Form",
+    "ff4":"Duplicate Driving License Form",
+    "down":"Downloads",
+    "Learner":"Learner Permit",
+    "RDL":"Regular Driving Licence",
+    "IDL":"International Driving Licence",
+    "DDL":"Duplicate Driving Licence",
+    "REDL":"Renewal of Driving Licence",
+    "TDL":"Track Licence Status",
+    "ST":"Sign Test",
+    "PT":"Practical Test",
+    "signs":"Signs",
+    "impinfo":"important Information",
+    "Wsigns":"Warning Signs",
+    "Rsigns":"Regulatory Signs",
+    "Isigns":"Informatory Signs",
+    "Csigns":"Compulsary Signs",
+    "Need": "Need a Ride",
+    "Share": "Share a Ride"
 
     
 }

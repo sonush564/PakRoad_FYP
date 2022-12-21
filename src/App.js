@@ -32,6 +32,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from "./Components/Header/Header";
 import TestCenter from "./Components/TestCenters/TestCenter";
+import RegulatorySign from "./Components/TrafficRulesModule/RegulatorySigns";
+import CumpulsorySign from "./Components/TrafficRulesModule/CumpulsorySigns";
+import InformatorySign from "./Components/TrafficRulesModule/InformatorySigns";
 function App() { 
   const changeLanguage=(ln)=>{
     return()=>{
@@ -91,6 +94,12 @@ function App() {
       <Route path="/about1" element={< About1 changeLanguage={changeLanguage} toggleDark={toggleDark}
       settoggleDark={settoggleDark}/>}> </Route>
       <Route path="/testcenters" element={< TestCenter changeLanguage={changeLanguage} toggleDark={toggleDark}
+      settoggleDark={settoggleDark}/>}> </Route>
+      <Route path="/regulatorysigns" element={< RegulatorySign changeLanguage={changeLanguage} toggleDark={toggleDark}
+      settoggleDark={settoggleDark}/>}> </Route>
+       <Route path="/cumpulsorysigns" element={< CumpulsorySign changeLanguage={changeLanguage} toggleDark={toggleDark}
+      settoggleDark={settoggleDark}/>}> </Route>
+      <Route path="/informatorysigns" element={< InformatorySign changeLanguage={changeLanguage} toggleDark={toggleDark}
       settoggleDark={settoggleDark}/>}> </Route>
     </Routes>
   </BrowserRouter>

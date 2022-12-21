@@ -350,10 +350,10 @@ export default function App() {
 			{showScore ? (
 				<div className='score-section'>
 					<div className='playagainT'>
-					{pass}!! آپ نے 10 میں سے {score} اسکور کیے ہیں۔
+					{pass}آپ نے 10 میں سے {score} اسکور کیے ہیں۔
 					</div>
 					<div className='playagainB' >
-					<Button sx={{fontSize: 18}} onClick={handlePlayAgain}  variant="contained" color="primary">دوبارہ کھیلو</Button>
+					<Button sx={{fontSize: 18}} onClick={handlePlayAgain}  variant="contained" color="primary">دوبارہ کوشش کریں</Button>
 					</div>
 				</div>
 			) : (

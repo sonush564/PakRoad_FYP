@@ -23,12 +23,12 @@ const Menubar = () => {
 
         <Container id='menu' >       
          <NavDropdown title={t('DrivingLicenceInformation')}  id="navbarScrollingDropdown" >
-        <NavDropdown.Item onClick={() => navigate('/LearnerPermit')}>Learner Permit</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/RegularDrivingLicense')} >Regular Driving License </NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/InternationDrivingLicense')}>International Driving License</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/DrivingLicenseRenewal')}>Driving License Renewal</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/DuplicateDrivingLicense')}>Duplicate Driving License</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => { window.location.href = url; } } >   Track License Status</NavDropdown.Item>  
+        <NavDropdown.Item onClick={() => navigate('/LearnerPermit')}>{t('Learner')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/RegularDrivingLicense')} >{t('RDL')} </NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/InternationDrivingLicense')}>{t('IDL')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/DrivingLicenseRenewal')}>{t('REDL')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/DuplicateDrivingLicense')}>{t('DDL')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => { window.location.href = url; } } >{t('TDL')} </NavDropdown.Item>  
         
    
        </NavDropdown>   
@@ -36,31 +36,31 @@ const Menubar = () => {
         <div class="vl"></div>
       <Container id='menu' >
         <NavDropdown title={t('DrivingTestPractice')}    id="navbarScrollingDropdown">
-        <NavDropdown.Item onClick={() => navigate('/Quiz')} >Sign Test</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/Practical')}>Practical Test</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/Quiz')} >{t('ST')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/Practical')}> {t('PT')}</NavDropdown.Item>
         
         </NavDropdown>   
         </Container>
         <div class="vl"></div>
         <Container id='menu' >
         <NavDropdown title={t('TrafficRuless')} onClick={() =>{{setMultiD('')}}} id="navbarScrollingDropdown"> 
-        <NavDropdown onClick={() =>{{setMultiD('impDiv')}}} title='Signs'  >
+        <NavDropdown onClick={() =>{{setMultiD('impDiv')}}} title={t('signs')}  >
           <div className='multiDrop'>
-        <NavDropdown.Item onClick={() =>{ navigate('/Sign')}} >Warning Signs</NavDropdown.Item>
-        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Regulatory Signs</NavDropdown.Item>
-        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Mandatory Signs</NavDropdown.Item>
-        <NavDropdown.Item onClick={() =>{ navigate('/ImportantInformation')}} >Important Signs</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/Sign')}} >{t('Wsigns')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/regulatorysigns')}} >{t('Rsigns')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/cumpulsorysigns')}} >{t('Csigns')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() =>{ navigate('/informatorysigns')}} >{t('Isigns')}</NavDropdown.Item>
         </div>
         </NavDropdown>      
-        <NavDropdown.Item className={multiD} onClick={() =>{ navigate('/ImportantInformation')}} >Important Information</NavDropdown.Item>
+        <NavDropdown.Item className={multiD} onClick={() =>{ navigate('/ImportantInformation')}} >{t('impinfo')}</NavDropdown.Item>
         </NavDropdown>        
         </Container>
        
         <div class="vl"></div>
         <Container id='menu' >
         <NavDropdown title={t('NeedShareRide')}    id="navbarScrollingDropdown">
-        <NavDropdown.Item onClick={() => navigate('/NeedRide')}>Need a Ride</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => navigate('/ShareRide')} >Share a Ride</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/NeedRide')}>{t('Need')}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => navigate('/ShareRide')} >{t('Share')}</NavDropdown.Item>
       
         </NavDropdown>   
         </Container>

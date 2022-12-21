@@ -12,7 +12,7 @@ import animals from '../Signs/animals.png';
 import Stop from '../Signs/Stop.png';
 import NoParking from '../Signs/NoParking.png';
 import Info from '../Images/Info.png'
-const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
+const RegulatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
     const [sign, setSign] = useState({
       danger: false,
@@ -42,9 +42,13 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
     return ( 
         <>
         <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
+        
       <div onClick={()=> allFalse()} >
-      <h1 id='LP'> Signs</h1>
-     <h3 id='WS'>Warning Signs:</h3>
+     <h1 id='LP'>Warning Signs:</h1>
+     <div className='Wtext'>
+        These signs are meant to warn the driver about the hazards/situation lying ahead on the road. The driver should obey these for their safety. Though violation of these road sign do not attract any legal action, they are very important for the fact that avoiding them could result in major accidents. Cautionary signs are triangular in shape with red border.
+
+        </div>
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={Danger}  alt="logo" /> 
      <div>
@@ -169,4 +173,4 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
      );
 }
  
-export default Sign;
+export default RegulatorySign;

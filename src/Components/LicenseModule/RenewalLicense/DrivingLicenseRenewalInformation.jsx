@@ -105,6 +105,7 @@ const DrivingLicenseRenewalInformation = () => {
         <br/><h6 id='rS' style={{cursor:'pointer'}}>How can I locate my test center? </h6><br/>
         <h6 id='rS' onClick={() => navigate('/about') } style={{cursor:'pointer'}}>How can I contact you? </h6>
         <br/><h6><a  href="https://dlims.punjab.gov.pk/track/" target="_blank"> How can I check my license status? </a></h6>
+        <br/><h6><a  href="https://rasta.punjab.gov.pk/rasta_public/" target="_blank">  From where i can book slot for license? </a></h6>
        </Container>
     </Container>
     </>
