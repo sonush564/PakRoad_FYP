@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Container, Navbar} from 'react-bootstrap';
 import NewLogo1 from '../Images/NewLogo1.png';
 import { MDBCol, MDBInput } from "mdbreact";
@@ -7,12 +7,58 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation, initReactI18next } from "react-i18next";
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
+import { ReactNotifications } from 'react-notifications-component'
+import { Store } from 'react-notifications-component';
 const Header = ({changeLanguage, toggleDark, settoggleDark}) => {
     const navigate = useNavigate();
-    
+    const [search, setSearch] = useState();
+const [search1, setSearch1] = useState();
         const handleModeChange = () => {
          settoggleDark(!toggleDark);
        };
+       const handleChange = (newValue) => {
+        const val=newValue.target.value.toLowerCase()
+        setSearch(val);
+      };
+      const handleChange1 = (event) => {
+        const timeout = setTimeout(() => {
+        if (event.key === 'Enter') {
+      
+          if(search=='learner' || search=='permit'|| search=='learner permit'|| search=='learner permit form'){
+           
+            navigate('/LearnerPermit')
+          }
+          
+         else if(search=='quiz' || search=='sign test'|| search=='practice'|| search=='test'){
+            navigate('/Quiz')
+          }
+          else{
+            Store.addNotification({
+              title: "Oops!",
+              message: "results not found",
+              type: "danger",
+              insert: "top",
+              container: "top-center",
+              animationIn: ["animate__animated", "animate__fadeIn"],
+              animationOut: ["animate__animated", "animate__fadeOut"],
+              dismiss: {
+                duration: 5000,
+                onScreen: true
+              }
+            });
+        
+        }
+     
+      
+        }
+        
+      }, 1000)
+      };
+      useEffect(()=>{
+        setSearch1(search);
+        console.log(search)
+       
+      },[search])
        const MaterialUISwitch = styled(Switch)(({ theme }) => ({
          width: 62,
          height: 34,
@@ -61,6 +107,7 @@ const Header = ({changeLanguage, toggleDark, settoggleDark}) => {
        }));
     return ( 
         <Container fluid id='bg' >
+               <ReactNotifications />
     <Navbar.Brand>
       <img width="90px"
         height="90px"
@@ -71,7 +118,10 @@ const Header = ({changeLanguage, toggleDark, settoggleDark}) => {
         alt="logo" />
     </Navbar.Brand>
     <MDBCol md="3" style={{ float: "right", marginTop: "20px" }}>
-      <MDBInput hint="Search" type="text" containerClass="active-pink active-pink-2 mt-0" />
+      <MDBInput hint="Search" type="text" containerClass="active-pink active-pink-2 mt-0"
+       onChange={handleChange}
+       onKeyDown={handleChange1}
+       />
       <div className='TLbutton'>
       
       <div className='toggle'>

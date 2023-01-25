@@ -52,19 +52,17 @@ const handleChange = (newValue) => {
 };
 const handleChange1 = (event) => {
   if (event.key === 'Enter') {
-
+    const timeout = setTimeout(() => {
     if(search=='learner' || search=='permit'|| search=='learner permit'|| search=='learner permit form'){
-      const timeout = setTimeout(() => {
+     
       navigate('/LearnerPermit')
-    }, 1000)
-    return () => clearTimeout(timeout)
+  
     }
     
    else if(search=='quiz' || search=='sign test'|| search=='practice'|| search=='test'){
       navigate('/Quiz')
     }
     else{
-    const timeout = setTimeout(() => {
       Store.addNotification({
         title: "Oops!",
         message: "results not found",
@@ -78,13 +76,13 @@ const handleChange1 = (event) => {
           onScreen: true
         }
       });
-    }, 2000)
+    
     return () => clearTimeout(timeout)
   }
-
+}, 2000)
   }
   
-  
+
 };
 useEffect(()=>{
   setSearch1(search);
