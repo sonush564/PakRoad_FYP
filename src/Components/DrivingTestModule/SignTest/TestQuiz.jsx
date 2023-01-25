@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import NewLogo from '../../Images/NewLogo.png';
+import Confetti from 'react-confetti'
 import noright from '../../Signs/noright.jpg';
 import O1 from '../../../QuestionsSigns/Q1/O1.png'
 import O2 from '../../../QuestionsSigns/Q1/O2.png'
@@ -247,6 +248,7 @@ export default function App() {
 	const [score, setScore] = useState(0);
 	const [scoree, setScoree] = useState(0);
 	const [value, setValue] = useState(false);
+	const [celeb, setCeleb] = useState(false);
 	const [list, setList] = useState(questions);
 	const [clicked, setClikced] = useState('');
 	const [sec, setSec] = useState(59);
@@ -285,8 +287,14 @@ export default function App() {
 			setShowScore(true)
 		}
 		if(score<6){
+			setCeleb(false)
 			setPass('ناکام')
 		}
+		if(score>6){
+			setCeleb(true)
+			setPass('پاس')
+		}
+
 	   };
 	const handleAnswerOptionClick = (isCorrect, e) => {
 		if(!m){
@@ -349,8 +357,11 @@ export default function App() {
     
 			{showScore ? (
 				<div className='score-section'>
+						 {celeb && ( 
+					<Confetti/>
+					 )}
 					<div className='playagainT'>
-					{pass}آپ نے 10 میں سے {score} اسکور کیے ہیں۔
+					{pass} آپ نے 10 میں سے {score} اسکور کیے ہیں۔
 					</div>
 					<div className='playagainB' >
 					<Button sx={{fontSize: 18}} onClick={handlePlayAgain}  variant="contained" color="primary">دوبارہ کوشش کریں</Button>

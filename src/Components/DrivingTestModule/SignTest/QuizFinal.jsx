@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Button from '@mui/material/Button';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import Confetti from 'react-confetti'
 import NewLogo from '../../Images/NewLogo.png';
 import noright from '../../Signs/noright.jpg';
 import O1 from '../../../QuestionsSigns/Q1/O1.png'
@@ -246,6 +247,7 @@ export default function App() {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [scoree, setScoree] = useState(0);
+	const [celeb, setCeleb] = useState(false);
 	const [value, setValue] = useState(false);
 	const [list, setList] = useState(questions);
 	const [clicked, setClikced] = useState('');
@@ -280,15 +282,22 @@ export default function App() {
 	const handleRemoveItem = (e) => {
 		const id = e
 		console.log(id)
+		console.log('score'+score)
 		 setList(list.filter(item => item.questionId!== id));
 		 console.log("len"+list.length)
 		 if(list.length===10){
 			setShowScore(true)
+			
 		}
 		if(score<6){
 			setPass('Fail')
-
+			setCeleb(false)
 		}
+		if(score>6){
+			setPass('Pass')
+			setCeleb(true)
+		}
+
 	   };
 	const handleAnswerOptionClick = (isCorrect, e) => {
 		if(!m){
@@ -352,7 +361,11 @@ export default function App() {
         alt="logo" />
     
 			{showScore ? (
+				
 				<div className='score-section'>
+					 {celeb && ( 
+					<Confetti/>
+					 )}
 					<div className='playagainT'>
 					{pass}!! You scored {score} out of 10
 					</div>

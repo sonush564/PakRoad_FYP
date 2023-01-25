@@ -25,6 +25,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
   const [date, setDate] = useState("");
   const [isShown, setIsShown] = useState(false);
   const [Shown, setShown] = useState(true);
+  const [tabel, setTable] = useState('light');
   const[search, setSearch]= useState([]);
   const userCollectionRef=collection(db,"user")
   const handleChange = (newValue) => {
@@ -42,7 +43,17 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
       name= event.target.name;
       val= event.target.value;
       setUser({ ...user, [name]: val})
+     
        }
+       useEffect(()=>{
+        if(toggleDark==true){
+          setTable('dark')
+        }
+        if(toggleDark==false){
+          setTable('light')
+        }
+       
+       })
   useEffect(()=>{
     const getUser=async()=>{
       const data=await getDocs(userCollectionRef);
@@ -57,9 +68,11 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
       const filterResult=search.filter(item=>{   
         return item.center===center&&item.area===area&&item.gender===gender&&item.vehcile===vehcile&&new Date(item.date.seconds*1000).toDateString()===date. toDateString()   
       })
+    
       setIsShown(true);
       setShown(false);
       setInput(filterResult) 
+      
     }
     else{
       toast.error('Fill the form completely')
@@ -185,7 +198,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
     )}
     {isShown && ( 
         <div className='ResultRide'>
-             <Table striped bordered hover variant="light" className='table'>
+            <Table striped bordered hover variant={tabel} className='table'>
              <thead className='thead'>
                <tr> 
                  <th>Name</th>

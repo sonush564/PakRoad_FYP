@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {Container, Navbar} from 'react-bootstrap';
 import Button from '@mui/material/Button';
 import NewLogo from '../Images/NewLogo.png';
@@ -12,12 +12,17 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import { use } from "i18next";
+import { ReactNotifications } from 'react-notifications-component'
+import { Store } from 'react-notifications-component';
 
 
 
 const Home = ({changeLanguage, toggleDark, settoggleDark} ) => {
   const [udShown, setUdShown] = useState(true);
 const [engShown, setEngShown] = useState(false);
+const [search, setSearch] = useState();
+const [search1, setSearch1] = useState();
 const [learn, setLearn] = useState('learn');
 const [img, setImg] = useState('img1');
   const {t, il8n}= useTranslation();
@@ -35,11 +40,58 @@ const [img, setImg] = useState('img1');
  setUdShown(false);
  setLearn('learnn');
  setImg('img11')
+ console.log(search1)
 
  }
  const handleModeChange = () => {
   settoggleDark(!toggleDark);
 };
+const handleChange = (newValue) => {
+  const val=newValue.target.value.toLowerCase()
+  setSearch(val);
+};
+const handleChange1 = (event) => {
+  if (event.key === 'Enter') {
+
+    if(search=='learner' || search=='permit'|| search=='learner permit'|| search=='learner permit form'){
+      const timeout = setTimeout(() => {
+      navigate('/LearnerPermit')
+    }, 1000)
+    return () => clearTimeout(timeout)
+    }
+    
+   else if(search=='quiz' || search=='sign test'|| search=='practice'|| search=='test'){
+      navigate('/Quiz')
+    }
+    else{
+    const timeout = setTimeout(() => {
+      Store.addNotification({
+        title: "Oops!",
+        message: "results not found",
+        type: "danger",
+        insert: "top",
+        container: "top-center",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true
+        }
+      });
+    }, 2000)
+    return () => clearTimeout(timeout)
+  }
+
+  }
+  
+  
+};
+useEffect(()=>{
+  setSearch1(search);
+  console.log(search)
+ 
+},[search])
+
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -94,6 +146,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     return ( 
         <>
         <div className='HomeDiv'>
+        <ReactNotifications />
     <Container fluid id='banner' >
     <Navbar.Brand>
           <img width="90px"
@@ -104,7 +157,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
             alt="logo" />
         </Navbar.Brand>
         <MDBCol md="3" style={{ float: "right", marginTop: "20px" }}>
-          <MDBInput hint="Search" type="text" containerClass="active-pink active-pink-2 mt-0" />
+          <MDBInput hint="Search" type="text" containerClass="active-pink active-pink-2 mt-0" 
+          onChange={handleChange}
+          onKeyDown={handleChange1}
+          />
         </MDBCol>
         <div className='lanButton'>
         {engShown && ( 

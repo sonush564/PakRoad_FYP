@@ -630,7 +630,7 @@ margin-right:5%
     height: 40px;
   }
   .croos2{
-    margin-left: 600px;
+    margin-left: 1200px;
     position: absolute;
     margin-top: -45px;
     width: 100px;
@@ -1092,8 +1092,8 @@ margin-right:5%
   height: 70px;
 }
 .centerTable{
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
+  
 }
 .headerTable{
  
@@ -1117,7 +1117,7 @@ margin-right:5%
   width: 700px;
 }
 .needRideHeader{
-margin-right: 80px;
+
   width: 100%;
 }
 .multiDrop{
@@ -1172,4 +1172,12 @@ margin-top: 30px;
   text-decoration: underline;
   text-align: justify;
 
+}
+.v1{
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 500px;
+}
+.click{
+  cursor: pointer;
 }

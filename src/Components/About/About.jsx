@@ -10,8 +10,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import Form from 'react-bootstrap/Form';
 import { ReactNotifications } from 'react-notifications-component'
 import { Store } from 'react-notifications-component';
+
+
 const Contact = ({changeLanguage, toggleDark, settoggleDark}) => {
   const form = useRef();
+ 
   const [btnShown, setBtnShown] = useState(true);
 const [loadShown, setLoadShown] = useState(false);
 const [value, setValue] = React.useState('');
@@ -84,6 +87,7 @@ if(value){
   return (
     <div>
         <ReactNotifications />
+        
       <div className={hHight}>
     <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
     </div>
@@ -91,12 +95,12 @@ if(value){
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" value={name} onChange={nameChange} required/>
+        <input  type="text" name="user_name" value={name} onChange={nameChange} required/>
         <label>Email</label>
         <input type="email" name="user_email" value={email} onChange={emailChange} required />
     
     
-    <Form.Select aria-label="Default select example"  name="user_select"
+    <Form.Select  aria-label="Default select example"  name="user_select"
     className='pupose'
     
           value={value}
