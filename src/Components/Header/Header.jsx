@@ -147,13 +147,15 @@ const [search1, setSearch1] = useState();
         <Container fluid id='bg' >
                <ReactNotifications />
     <Navbar.Brand>
+      <div onClick={() => navigate('/')}>
       <img width="90px"
         height="90px"
         style={{ float: "left", marginTop: "15px" }}
         className="img-responsive"
         src={NewLogo1}
-        onClick={() => navigate('/')}
+        onClick={changeLanguage("en")}
         alt="logo" />
+        </div>
     </Navbar.Brand>
     <MDBCol md="3" style={{ float: "right", marginTop: "20px" }}>
       <MDBInput hint="Search" type="text" containerClass="active-pink active-pink-2 mt-0"
