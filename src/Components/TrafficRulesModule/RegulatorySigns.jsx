@@ -8,9 +8,10 @@ import noUturn from '../Signs/noUturn.gif';
 import noULturn from '../Signs/noULturn.jpg';
 import carTrack from '../Signs/carTrack.jpg';
 import HM from '../Signs/HM.jpg';
+import { useTranslation, initReactI18next } from "react-i18next";
 import Info from '../Images/Info.png'
 const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
-
+  const {t, il8n}= useTranslation();
     const [sign, setSign] = useState({
       danger: false,
       leftTurn: false,
@@ -41,10 +42,9 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
         <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
         
       <div onClick={()=> allFalse()} >
-     <h1 id='LP'>Regulatory Signs:</h1>
+     <h1 id='LP'>{t('RS')}</h1>
      <div className='Wtext'>
-     Regulatory signs describe a range of sign that are used to indicate or reinforce traffic laws, regulations or requirements which apply either at all times or at specified times or places upon a street or highway, the disregard of which may constitute a violation, or signs in general that regulate public behavior in places open to the public. Regulatory signs include Stop Signs, Yield Signs, Speed Limit Signs, Do Not Enter, Handicapped, One Way Signs and HOV Signs
-
+     {t('RS1')}
         </div>
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={noLeft}  alt="logo" /> 

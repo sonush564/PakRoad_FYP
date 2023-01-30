@@ -10,8 +10,9 @@ import spoon from '../Signs/spoon.png';
 import p1 from '../Signs/p1.png';
 import CArrow from '../Signs/CArrow.png';
 import Info from '../Images/Info.png'
+import { useTranslation, initReactI18next } from "react-i18next";
 const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
-
+  const {t, il8n}= useTranslation();
     const [sign, setSign] = useState({
       danger: false,
       leftTurn: false,
@@ -42,10 +43,9 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
         <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
         
       <div onClick={()=> allFalse()} >
-     <h1 id='LP'>Informatory Signs:</h1>
+     <h1 id='LP'> {t('IS')}</h1>
      <div className='Wtext'>
-     These signs are meant to provide information on direction, destination, roadside facilities, etc. to the road user. Following informative road signs helps a driver in saving time, reaching destination without wandering around. These signs are generally facilitators to the driver. These signs are normally blue in colour.
-
+     {t('IS1')}
         </div>
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={bed}  alt="logo" /> 

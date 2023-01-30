@@ -28,9 +28,47 @@ const [search1, setSearch1] = useState();
            
             navigate('/LearnerPermit')
           }
-          
-         else if(search=='quiz' || search=='sign test'|| search=='practice'|| search=='test'){
+          else if(search=='regular' || search=='driving lisence'|| search=='lisence'|| search=='regular driving lisence'|| search=='pakistani driving lisence'|| search=='driving lisence form'){
+            navigate('/RegularDrivingLicense')
+          }
+          else if(search=='duplicate' || search=='duplicate driving lisence'|| search=='duplicate pakistani driving lisence'|| search=='dupliacte driving lisence form'){
+            navigate('/DuplicateDrivingLicense')
+          }
+          else if(search=='international' || search=='international driving lisence'|| search=='international pakistani driving lisence'|| search=='international driving lisence form'){
+            navigate('/InternationalDrivingLicense')
+          }
+          else if(search=='renewal' || search=='renewal of driving lisence'||search=='international pakistani driving lisence'|| search=='international driving lisence form'){
+            navigate('/DrivingLicenseRenewal')
+          }
+         else if(search=='quiz' || search=='sign test'|| search=='practice'|| search=='test' || search=='test practice'){
             navigate('/Quiz')
+          }
+          else if(search=='warning signs' || search=='signs'|| search=='traffic rules'|| search=='traffic signs' || search=='road signs'){
+            navigate('/Sign')
+          }
+          else if(search=='regulatory signs'){
+            navigate('/regulatorysigns')
+          }
+          else if(search=='cumpulsory signs'){
+            navigate('/cumpulsorysigns')
+          }
+          else if(search=='informatory signs'){
+            navigate('/informatorysigns')
+          }
+          else if(search=='info' || search=='important' || search=='important signs'|| search=='important information'|| search=='animation' || search=='animations'|| search=='video animations'){
+            navigate('/Sign')
+          }
+          else if(search=='info' || search=='important signs'|| search=='important information'|| search=='animation' || search=='animations'|| search=='video animations'){
+            navigate('/ImportantInformation')
+          }
+          else if(search=='need' || search=='need ride'|| search=='want ride'){
+            navigate('/NeedRide')
+          }
+          else if(search=='share' || search=='share ride'|| search=='get ride' || search=='ride'){
+            navigate('/ShareRide')
+          }
+          else if(search=='about' || search=='about us'|| search=='contact' || search=='contact us' || search=='contact info' ||search=='contact form'){
+            navigate('/about')
           }
           else{
             Store.addNotification({

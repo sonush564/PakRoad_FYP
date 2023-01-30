@@ -21,9 +21,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ReactNotifications } from 'react-notifications-component'
 import { Store } from 'react-notifications-component';
-
+import { useTranslation, initReactI18next } from "react-i18next";
 export default function ShareRide({changeLanguage, toggleDark, settoggleDark}) {
     const userCollectionRef=collection(db,"user");
+    const {t, il8n}= useTranslation();
     const [date, setDate] = useState("");
     const [phone, setPhone] = useState('');
     const [time, setTime] =useState("");
@@ -116,7 +117,7 @@ const handleChange = (newValue) => {
     <ReactNotifications />
   <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
     <div className='shareRideBg'>
-       
+       <h1 id='LP'>{t('Share')}</h1>
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
    
@@ -124,9 +125,9 @@ const handleChange = (newValue) => {
       <div className='shareRide1'>
           <div className='area1'>
           <TextField
-  helperText="Please enter your name"
+  helperText={t('need4')}
   id="demo-helper-text-misaligned"
-  label="Name"
+  label={t('share1')}
   name='name'
   value={user.name}
   onChange={getUser}
@@ -136,7 +137,7 @@ const handleChange = (newValue) => {
           </div>
           <div className='area1'>
           <MuiTelInput
-           label="Phone no"
+           label={t('share2')}
           error={errorText}
           helperText={errorText}
          defaultCountry="PK"
@@ -149,7 +150,7 @@ const handleChange = (newValue) => {
         <DatePicker
           disablePast
 
-          label="Select Date"
+          label={t('share3')}
           openTo="year"
           views={['year', 'month', 'day']}   
           value={date}
@@ -160,7 +161,7 @@ const handleChange = (newValue) => {
          <div className='area1'>
          <TimePicker
           disablePast
-          label="Time"
+          label={t('share4')}
           value={time}
           onChange={handleChange1}
           renderInput={(params) => <TextField {...params} />}
@@ -171,7 +172,7 @@ const handleChange = (newValue) => {
          <div className='shareRide2'>
          <div className='area'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">City</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share5')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -189,7 +190,7 @@ const handleChange = (newValue) => {
          </div>
          <div className='area'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Area</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share6')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -214,7 +215,7 @@ const handleChange = (newValue) => {
          </div>
          <div className='area'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Center</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share7')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -233,7 +234,7 @@ const handleChange = (newValue) => {
          </div>
          <div className='area'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Vehcile</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share8')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -251,7 +252,7 @@ const handleChange = (newValue) => {
          </div>
          <div className='area'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share9')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -268,7 +269,7 @@ const handleChange = (newValue) => {
 
 {btnShown && ( 
 <div className='submit'>
-         <Button color="primary" variant="contained" className='submitB' onClick={postData} >Submit
+         <Button color="primary" variant="contained" className='submitB' onClick={postData} >{t('need3')}
          </Button>
          <ToastContainer />
          <ToastContainer />

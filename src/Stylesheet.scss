@@ -4,6 +4,7 @@
  @import url('https://fonts.cdnfonts.com/css/catamaran');
  @import 'react-notifications-component/dist/theme.css';
 @import url('https://fonts.cdnfonts.com/css/poppins');
+@import "~video-react/styles/scss/video-react"; 
 
 *{
     margin-top: 0;
@@ -828,7 +829,7 @@ margin-right:5%
 }
 }
 .shareRide{
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: 130px;
     margin-right: 130px;
     border-radius: 5px;
@@ -1129,7 +1130,7 @@ margin-right:5%
 .Wtext{
   margin-left: 20px;
   margin-right: 20px;
-  text-align: justify;
+  text-align: center;
 }
 #footer{
   float: left;
@@ -1174,10 +1175,37 @@ margin-top: 30px;
 
 }
 .v1{
-  margin-top: 20px;
+  margin-top: -320px;
   margin-left: 20px;
-  width: 500px;
+  width: 650px;
+  border-radius: 5px;
+}
+.v2{
+  width: 650px;
+  margin-left: 680px;
+  margin-top: -130px;
 }
 .click{
   cursor: pointer;
+}
+.anitext1{
+  margin-left: 680px;
+ margin-top: 20px;
+ width: 650px;
+ text-align: justify;
+}
+.anitext2{
+  margin-right: 500px;
+  margin-left: 20px;
+ margin-top: 40px;
+ width: 650px;
+ text-align: justify;
+}
+.aniH{
+  font-weight: bold;
+}
+.infotext{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
 }

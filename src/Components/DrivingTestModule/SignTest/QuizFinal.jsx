@@ -389,7 +389,7 @@ export default function App() {
 					</div>
 					<div className='answer-section'>
 						{list[currentQuestion].answerOptions.map((answerOption, i) => {
-							return <Button key={i} className={clicked === answerOption.answerText ? "btn" : "option"} onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText)}>{answerOption.answerText}</Button>
+							return <Button key={i}  variant='' className={clicked === answerOption.answerText ? "btn" : "option"} onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText)}>{answerOption.answerText}</Button>
                      })}
 					</div>
 					<div className='nextBtn'>

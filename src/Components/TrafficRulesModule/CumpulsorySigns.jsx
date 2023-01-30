@@ -9,9 +9,10 @@ import CLeft from '../Signs/CLeft.png';
 import CRight from '../Signs/CRight.png';
 import CStraight from '../Signs/CStraight.png';
 import CArrow from '../Signs/CArrow.png';
+import { useTranslation, initReactI18next } from "react-i18next";
 import Info from '../Images/Info.png'
 const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
-
+  const {t, il8n}= useTranslation();
     const [sign, setSign] = useState({
       danger: false,
       leftTurn: false,
@@ -42,10 +43,9 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
         <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
         
       <div onClick={()=> allFalse()} >
-     <h1 id='LP'>Compulsary Signs:</h1>
+     <h1 id='LP'>{t('CS')}</h1>
      <div className='Wtext'>
-     These signs are obligatory on the traffic which uses a specific area of road. These signs indicate what must one do, rather than must not do. Mandatory Road signs are generally round in shape with red border. Some of them are blue in colour. 'Stop' and 'Give Way' are octagon and triangular, respectively, in shape. Violation of these signs attracts heavy fines and punishments. Importantly, violation of these could lead to major accidents also.
-
+     {t('RS1')}
         </div>
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={CArrow}  alt="logo" /> 

@@ -20,8 +20,10 @@ import Header from '../Header/Header';
 import areas from './Area'
 import { ToastContainer, toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
+import { useTranslation, initReactI18next } from "react-i18next";
 const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
   const [input, setInput]= useState([]);
+  const {t, il8n}= useTranslation();
   const [date, setDate] = useState("");
   const [isShown, setIsShown] = useState(false);
   const [Shown, setShown] = useState(true);
@@ -84,7 +86,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
        <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
        </div>
       <div id='needridee'>
-           <center>   <h1 > Need a Ride</h1> </center>
+           <center>   <h1 id='LP' >{t('Need')}</h1> </center>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <div>
@@ -92,7 +94,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
       <div className='needFeild'>
       <DatePicker
           disablePast
-          label="Select Date"
+          label={t('share3')}
           openTo="year"
           views={['year', 'month', 'day']}   
           value={date}
@@ -102,7 +104,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
         </div>
           <div className='needFeild'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Area</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share6')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -124,7 +126,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
          </div>
          <div className='needFeild'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Center</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share7')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -150,7 +152,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
          </div>
          <div className='needFeild'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share9')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -167,7 +169,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
 </div>
 <div className='needFeild'>
          <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Vehcile</InputLabel>
+  <InputLabel id="demo-simple-select-label">{t('share8')}</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -182,7 +184,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
 </FormControl>
 </div>
 <div className='submitN'>
-         <Button color="primary" variant='contained' className='searchButton'  onClick={()=>{handleFilter(user.center, user.area, user.gender,user.vehcile, date) }}> Search
+         <Button color="primary" variant='contained' className='searchButton'  onClick={()=>{handleFilter(user.center, user.area, user.gender,user.vehcile, date) }}> {t('need2')}
          </Button>
          <ToastContainer />
          </div>
@@ -193,7 +195,7 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
     </LocalizationProvider>
     {Shown && ( 
    <div className='needRide'>
-    Your Results will be shown here
+   {t('need1')}
    </div>
     )}
     {isShown && ( 
