@@ -49,10 +49,10 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={noLeft}  alt="logo" /> 
      <div>
-     <h6 style={{float:"left", marginLeft:"130px"}}>No Left Turn</h6>
+     <h6 style={{float:"left", marginLeft:"130px"}}>{t('r1')}</h6>
      <div onMouseEnter={()=> setSign({danger:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.danger &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", marginBottom:"59px"}} >No Left turn Ahead or Left turn not allowed</p>)}
+     {sign.danger &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", marginBottom:"59px"}} >{t('rr1')}</p>)}
      </div>   
      </div> 
      </Container>
@@ -61,10 +61,10 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}>
     <img id='warsign' className="img-responsive" src={noRight}  alt="logo" />
     <div >
-     <h6 style={{float:"left", marginLeft:"130px"}}>No Right Turn </h6>
+     <h6 style={{float:"left", marginLeft:"130px"}}>{t('r2')}</h6>
      <div onMouseEnter={()=> setSign({leftTurn:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.leftTurn &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>No right turn Ahead or right turn not allowed</p>)}
+     {sign.leftTurn &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>{t('rr2')}</p>)}
      </div>   
      </div> 
     </Container>
@@ -72,10 +72,10 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={noUturn}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"150px"}}>No U Trun</h6>
+     <h6 style={{float:"left", marginLeft:"150px"}}>{t('r3')}</h6>
      <div  onMouseEnter={()=> setSign({towWay:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.towWay&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>No U turn Ahead or U turn not allowed</p>)}
+     {sign.towWay&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>{t('rr3')}</p>)}
      </div>   
      </div> 
     </Container>
@@ -83,10 +83,10 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={HM}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"80px"}}>Hazardous Materials Prohibited Sign</h6>
+     <h6 style={{float:"left", marginLeft:"80px"}}>{t('r4')}</h6>
      <div onMouseEnter={()=> setSign({roadHump:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>On routes where the transporting of hazardous material is prohibited, the Hazardous Material Prohibition sign may be used.</p>)}
+     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",  width:"300px"}}>{t('rr4')}</p>)}
      </div>
      </div>
       </Container>
@@ -96,10 +96,10 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={carTrack}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"80px"}}> No Motor Vehicles On Tracks Sign </h6>
+     <h6 style={{float:"left", marginLeft:"80px"}}>{t('r5')}</h6>
      <div  onMouseEnter={()=> setSign({risk:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>The No Motor Vehicles On Tracks (R15-6) sign is used where there are adjacent traffic lanes separated from the LRT lane by a curb or pavement markings.
+     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",  width:"300px"}}>{t('rr5')}
 </p>)}
      </div>
      </div>
@@ -111,10 +111,10 @@ const Sign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={noULturn}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"100px", textAlign:'start'}}>No U Turn or Left Turn Sign</h6>
+     <h6 style={{float:"left", marginLeft:"100px", textAlign:'start'}}>{t('r6')}</h6>
      <div onMouseEnter={()=> setSign({signal:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", }}>At least one should be used at a location specified for No Left Turn signs.</p>)}
+     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", width:"300px" }}>{t('rr6')}</p>)}
      </div>
      </div>
      </Container>

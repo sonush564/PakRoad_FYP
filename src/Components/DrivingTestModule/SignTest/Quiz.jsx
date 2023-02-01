@@ -28,7 +28,7 @@ const Quiz = ({changeLanguage, toggleDark, settoggleDark}) => {
       {lanDiv && ( 
       <div className='quizLan'>
         < AiFillCloseCircle className='cross' onClick={()=>{{navigate('/Quiz')}{setLnDive('')}{setLanDive(false)}}}/>
-      <p className='bb'>Select Your Language</p>
+      <p className='bb'>{t('qb3')}</p>
         <div className='quizUB'>
       <Button className='EB' sx={{fontSize: 25}} variant='contained' color='success' id='BtnQuiz'onClick={() => navigate('/testquiz')} > اردو</Button> 
       </div>
@@ -41,8 +41,8 @@ const Quiz = ({changeLanguage, toggleDark, settoggleDark}) => {
       <div className={lnDiv}>      
       <img id='light' className="img-responsive" src={bulb}  alt="logo"  />
 
-      <Button variant="contained" id='BtnQuiz' onClick={() => {{setLanDive(true)}{setLnDive('quizDiv')}}}> Take Quiz </Button> 
-      <Button  variant="contained" id='BtnQuiz' onClick={() => navigate('/Sign')}>Prepare Quiz</Button>
+      <Button variant="contained" id='BtnQuiz' onClick={() => {{setLanDive(true)}{setLnDive('quizDiv')}}}> {t('qb2')} </Button> 
+      <Button  variant="contained" id='BtnQuiz' onClick={() => navigate('/Sign')}>{t('qb1')}</Button>
       
 
 <Footer/>

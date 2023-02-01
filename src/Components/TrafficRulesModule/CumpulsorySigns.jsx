@@ -50,10 +50,10 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={CArrow}  alt="logo" /> 
      <div>
-     <h6 style={{float:"left", marginLeft:"110px"}}>COMPULSORY KEEP LEFT</h6>
+     <h6 style={{float:"left", marginLeft:"110px"}}>{t('c1')}</h6>
      <div onMouseEnter={()=> setSign({danger:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.danger &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", marginBottom:"59px"}} >Driver should drive in left lane for smooth traffic flow. This sign is installed mainly on the roads, which do not have divider in between, and two way traffic flows on the same road.</p>)}
+     {sign.danger &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", marginBottom:"59px"}} >{t('cc1')}</p>)}
      </div>   
      </div> 
      </Container>
@@ -62,10 +62,10 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}>
     <img id='warsign' className="img-responsive" src={CLeft}  alt="logo" />
     <div >
-     <h6 style={{float:"left", marginLeft:"110px"}}>COMPULSORY TURN LEFT</h6>
+     <h6 style={{float:"left", marginLeft:"110px"}}>{t('c2')}</h6>
      <div onMouseEnter={()=> setSign({leftTurn:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.leftTurn &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>One has to turn towards left after seeing this sign. This may have been installed due to diversion.</p>)}
+     {sign.leftTurn &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>{t('cc2')}</p>)}
      </div>   
      </div> 
     </Container>
@@ -73,10 +73,10 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={CRight}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"110px"}}>COMPULSORY TURN RIGHT</h6>
+     <h6 style={{float:"left", marginLeft:"110px"}}>{t('c3')}</h6>
      <div  onMouseEnter={()=> setSign({towWay:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.towWay&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>Turn right only, there could be any reason for it but obeying this signal would lead to safety and hassle free drive</p>)}
+     {sign.towWay&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>{t('cc3')}</p>)}
      </div>   
      </div> 
     </Container>
@@ -84,10 +84,10 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"180px"}}><img id='warsign' className="img-responsive" src={CCR}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"80px"}}>COMPULSORY AHEAD OR TURN RIGHT</h6>
+     <h6 style={{float:"left", marginLeft:"80px"}}>{t('c4')}</h6>
      <div onMouseEnter={()=> setSign({roadHump:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px"}}>This sign directs the traffic to either move straight or take right turn. Turning towards left is prohibited.</p>)}
+     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px"}}>{t('cc4')}</p>)}
      </div>
      </div>
       </Container>
@@ -97,10 +97,10 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"180px"}}><img id='warsign' className="img-responsive" src={CCL}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"80px"}}> COMPULSORY AHEAD OR TURN LEFT</h6>
+     <h6 style={{float:"left", marginLeft:"80px"}}>{t('c5')}</h6>
      <div  onMouseEnter={()=> setSign({risk:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", width:"300px"}}>Move straight or take left turn. Turning towards right is prohibited. Violation of these sign may jeopardize your safety and may also lead to penal action.
+     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", width:"300px"}}>{t('cc5')}
 </p>)}
      </div>
      </div>
@@ -112,10 +112,10 @@ const CumpulsorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"180px"}}><img id='warsign' className="img-responsive" src={CCycle}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"100px", textAlign:'start'}}>COMPULSORY CYCLE TRACK</h6>
+     <h6 style={{float:"left", marginLeft:"100px", textAlign:'start'}}>{t('c6')}</h6>
      <div onMouseEnter={()=> setSign({signal:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px" }}>This sign directs that the cyclist should use this lane compulsorily and no other motorized vehicle should enter it. To be a safe cyclist and to avoid fines always follow this sign.</p>)}
+     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px" }}>{t('cc6')}</p>)}
      </div>
      </div>
      </Container>

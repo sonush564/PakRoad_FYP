@@ -28,12 +28,12 @@ const RegularDrivingLicenseInformation = () => {
   const navigate = useNavigate();
   const {t, il8n}= useTranslation();
   const onButtonClick = () => {
-    fetch('CNIC.pdf').then(response => {
+    fetch('Regular Lisence Form.pdf').then(response => {
         response.blob().then(blob => {
             const fileURL = window.URL.createObjectURL(blob);
             let alink = document.createElement('a');
             alink.href = fileURL;
-            alink.download = 'CNIC.pdf';
+            alink.download = 'Regular Lisence Form.pdf';
             alink.click();
         })
     })

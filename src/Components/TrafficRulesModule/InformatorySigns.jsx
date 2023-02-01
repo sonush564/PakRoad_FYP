@@ -50,10 +50,10 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <Container id='warn' style={{float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}} onClick={()=>allFalse()}>
      <img id='warsign' className="img-responsive" src={bed}  alt="logo" /> 
      <div>
-     <h6 style={{float:"left", marginLeft:"150px"}}>HOSPITAL</h6>
+     <h6 style={{float:"left", marginLeft:"150px"}}>{t('i1')}</h6>
      <div onMouseEnter={()=> setSign({danger:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.danger &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", marginBottom:"59px"}} >This sign indicates that there is Hospital nearby. The drivers should be careful while driving through this stretch and should not honk unnecessarily.</p>)}
+     {sign.danger &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", marginBottom:"59px"}} >{t('ii1')}</p>)}
      </div>   
      </div> 
      </Container>
@@ -62,10 +62,10 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}>
     <img id='warsign' className="img-responsive" src={spoon}  alt="logo" />
     <div >
-     <h6 style={{float:"left", marginLeft:"130px"}}>EATING PLACE</h6>
+     <h6 style={{float:"left", marginLeft:"130px"}}>{t('i2')}</h6>
      <div onMouseEnter={()=> setSign({leftTurn:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.leftTurn &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>This sign indicates that there is an eating-place in the vicinity. This sign is common on highways and long stretches of road.</p>)}
+     {sign.leftTurn &&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>{t('ii2')}</p>)}
      </div>   
      </div> 
     </Container>
@@ -73,10 +73,10 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"30px"}}><img id='warsign' className="img-responsive" src={phone}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"120px"}}>PUBLIC TELEPHONE</h6>
+     <h6 style={{float:"left", marginLeft:"120px"}}>{t('i3')}</h6>
      <div  onMouseEnter={()=> setSign({towWay:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.towWay&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>This sign indicates the availability of Telephone near road.</p>)}
+     {sign.towWay&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px"}}>{t('ii3')}</p>)}
      </div>   
      </div> 
     </Container>
@@ -84,10 +84,10 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"150px"}}><img id='warsign' className="img-responsive" src={petrol}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"130px"}}>PETROL PUMP</h6>
+     <h6 style={{float:"left", marginLeft:"130px"}}>{t('i4')}</h6>
      <div onMouseEnter={()=> setSign({roadHump:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px"}}>This informatory sign indicates that there is a Petrol Pump ahead. Sometimes distance is also indicated on this sign which gives an idea that how far is the Petrol pump from the sign post.</p>)}
+     {sign.roadHump&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px"}}>{t('ii4')}</p>)}
      </div>
      </div>
       </Container>
@@ -97,10 +97,10 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"150px"}}><img id='warsign' className="img-responsive" src={p1}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"130px"}}> PARK THIS SIDE</h6>
+     <h6 style={{float:"left", marginLeft:"130px"}}>{t('i5')}</h6>
      <div  onMouseEnter={()=> setSign({risk:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", width:"300px"}}>This sign is erected at destination telling exactly where to park your vehicles. This also indicates the type of vehicles to be parked.
+     {sign.risk&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px", width:"300px"}}>{t('ii5')}
 </p>)}
      </div>
      </div>
@@ -112,10 +112,10 @@ const InformatorySign = ({changeLanguage, toggleDark, settoggleDark}) => {
 
      <Container id='warn' style={{ float:"left", width:"30%", height:"150px",marginLeft:"30px", marginTop:"150px"}}><img id='warsign' className="img-responsive" src={bed2}  alt="logo" />
      <div>
-     <h6 style={{float:"left", marginLeft:"130px", textAlign:'start'}}>RESTING PLACE</h6>
+     <h6 style={{float:"left", marginLeft:"130px", textAlign:'start'}}>{t('i6')}</h6>
      <div onMouseEnter={()=> setSign({signal:true})}>
      <img id='infosign' className="img-responsive" src={Info}  alt="logo" style={{float:"left", marginTop:"3px", marginLeft:"3px"}} />
-     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px" }}>This sign is erected near motel, lodge or any other facility for resting on the road. These signs can be seen on highways.
+     {sign.signal&&(<p style={{border:"solid 2px",float:"right", marginLeft:"260px",width:"300px" }}>{t('ii6')}
  
  </p>)}
      </div>

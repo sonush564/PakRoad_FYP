@@ -22,6 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ReactNotifications } from 'react-notifications-component'
 import { Store } from 'react-notifications-component';
 import { useTranslation, initReactI18next } from "react-i18next";
+import Footer from '../Header/Footer';
 export default function ShareRide({changeLanguage, toggleDark, settoggleDark}) {
     const userCollectionRef=collection(db,"user");
     const {t, il8n}= useTranslation();
@@ -286,6 +287,7 @@ const handleChange = (newValue) => {
          </div>
       </Stack>
     </LocalizationProvider>
+    <Footer/>
     </div>
     </>
   );

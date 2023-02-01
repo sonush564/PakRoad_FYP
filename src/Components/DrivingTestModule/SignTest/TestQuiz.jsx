@@ -251,8 +251,8 @@ export default function App() {
 	const [celeb, setCeleb] = useState(false);
 	const [list, setList] = useState(questions);
 	const [clicked, setClikced] = useState('');
-	const [sec, setSec] = useState(59);
-    const [min, setMin] = useState(0);
+	const [sec, setSec] = useState(30);
+    const [min, setMin] = useState(2);
 	const [m, setM] = useState(0);
 	const navigate = useNavigate();
 	const [pass, setPass] = useState('پاس');
@@ -337,8 +337,8 @@ export default function App() {
   }
   const handlePlayAgain = () => {
 	setScore(0);
-	setSec(59)
-	setMin(0)
+	setSec(30)
+	setMin(2)
 	setCurrentQuestion(0)
 	setList(questions)
 	setShowScore(false)

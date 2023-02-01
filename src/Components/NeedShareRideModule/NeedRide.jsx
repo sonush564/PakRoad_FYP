@@ -21,6 +21,8 @@ import areas from './Area'
 import { ToastContainer, toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
 import { useTranslation, initReactI18next } from "react-i18next";
+import Footer from '../Header/Footer';
+
 const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
   const [input, setInput]= useState([]);
   const {t, il8n}= useTranslation();
@@ -232,7 +234,9 @@ const NeedRide = ({changeLanguage, toggleDark, settoggleDark}) => {
            </Table>    
         </div>
          )}
+         
         </div>
+        <Footer/>
         </>
      );
 }

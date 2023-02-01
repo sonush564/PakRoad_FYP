@@ -10,11 +10,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import Form from 'react-bootstrap/Form';
 import { ReactNotifications } from 'react-notifications-component'
 import { Store } from 'react-notifications-component';
+import Footer from '../Header/Footer';
+import { useTranslation, initReactI18next } from "react-i18next";
 
 
 const Contact = ({changeLanguage, toggleDark, settoggleDark}) => {
   const form = useRef();
- 
+  const {t, il8n}= useTranslation();
   const [btnShown, setBtnShown] = useState(true);
 const [loadShown, setLoadShown] = useState(false);
 const [value, setValue] = React.useState('');
@@ -85,18 +87,25 @@ if(value){
 
 
   return (
-    <div>
+    <div >
+      
+      <div >
         <ReactNotifications />
         
       <div className={hHight}>
     <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
     </div>
-    <div>
+    <div className="aboutUs1">
+<h1 id="LP">{t('About')}</h1>
+<p>{t('About1')}</p>
+    </div>
+    <div className="aboutUs">
+    <h1 id="LP">{t('About9')}</h1>
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
+        <label>{t('share1')}</label>
         <input  type="text" name="user_name" value={name} onChange={nameChange} required/>
-        <label>Email</label>
+        <label>{t('About2')}</label>
         <input type="email" name="user_email" value={email} onChange={emailChange} required />
     
     
@@ -106,13 +115,13 @@ if(value){
           value={value}
           label="Age"
           onChange={handleChange}>
-      <option>Select Purpose</option>
-      <option value="FeedBack">FeedBack</option>
-      <option value="Complaint">Complaint</option>
-      <option value="Suggession">Suggession</option>
-      <option value="Other">Other</option>
+      <option>{t('About3')}</option>
+      <option value="FeedBack">{t('About4')}</option>
+      <option value="Complaint">{t('About5')}</option>
+      <option value="Suggession">{t('About6')}</option>
+      <option value="Other">{t('About7')}</option>
     </Form.Select>
-        <label>Message</label>
+        <label>{t('About8')}</label>
         <textarea name="message" value={msg}onChange={msgChange} required/>
         <div className="LSdiv">
         {loadShown && (
@@ -124,7 +133,7 @@ if(value){
         )}
         {btnShown && ( 
         <div className="ASB">
-        <Button color="success" onClick={() => setHHeight('a1header')}  type="submit" variant="contained" className='AbSubmit'endIcon={<SendIcon />}>Submit
+        <Button color="success" onClick={() => setHHeight('a1header')}  type="submit" variant="contained" className='AbSubmit'endIcon={<SendIcon />}>{t('need3')}
          </Button>
          <ToastContainer />
          </div>
@@ -132,6 +141,8 @@ if(value){
         </div>
       </form>
     </StyledContactForm>
+    </div>
+    <Footer/>
     </div>
     </div>
   );
