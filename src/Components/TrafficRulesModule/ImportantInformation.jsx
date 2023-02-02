@@ -86,6 +86,21 @@ const ImportantInformation = ({changeLanguage, toggleDark, settoggleDark}) => {
     />
 </div>
 </div>
+<div>
+    <div className='anitext5'>
+        <h2 className='aniH'>{t('im23')}</h2>
+        <p>
+            {t('im24')} <br />
+           
+        </p>
+        </div>
+<div className='v5'> 
+<Player
+      playsInline
+      src={v1}
+    />
+</div>
+</div>
 <Footer/>
 </div>
     );
