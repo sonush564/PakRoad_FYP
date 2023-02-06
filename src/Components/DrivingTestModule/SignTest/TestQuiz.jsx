@@ -252,6 +252,7 @@ export default function App() {
 	const [list, setList] = useState(questions);
 	const [clicked, setClikced] = useState('');
 	const [sec, setSec] = useState(30);
+	const [bvalue, setBvalue] = useState('دوبارہ کھیلو');
     const [min, setMin] = useState(2);
 	const [m, setM] = useState(0);
 	const navigate = useNavigate();
@@ -289,10 +290,12 @@ export default function App() {
 		if(score<6){
 			setCeleb(false)
 			setPass('ناکام')
+			setBvalue('دوبارہ کوشش کریں')
 		}
 		if(score>6){
 			setCeleb(true)
 			setPass('پاس')
+			setBvalue('دوبارہ کھیلو')
 		}
 
 	   };
@@ -364,7 +367,7 @@ export default function App() {
 					{pass} آپ نے 10 میں سے {score} اسکور کیے ہیں۔
 					</div>
 					<div className='playagainB' >
-					<Button sx={{fontSize: 18}} onClick={handlePlayAgain}  variant="contained" color="primary">دوبارہ کوشش کریں</Button>
+					<Button sx={{fontSize: 18}} onClick={handlePlayAgain}  variant="contained" color="primary">{bvalue}</Button>
 					</div>
 				</div>
 			) : (

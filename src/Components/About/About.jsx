@@ -12,10 +12,12 @@ import { ReactNotifications } from 'react-notifications-component'
 import { Store } from 'react-notifications-component';
 import Footer from '../Header/Footer';
 import { useTranslation, initReactI18next } from "react-i18next";
-
+import { AiFillCloseCircle } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = ({changeLanguage, toggleDark, settoggleDark}) => {
   const form = useRef();
+  const navigate = useNavigate();
   const {t, il8n}= useTranslation();
   const [btnShown, setBtnShown] = useState(true);
 const [loadShown, setLoadShown] = useState(false);
@@ -24,6 +26,8 @@ const [name, setName] = React.useState('');
 const [email, setEmail] = React.useState('');
 const [msg, setMsg] = React.useState('');
 const [hHight, setHHeight] = React.useState('aheader');
+const [lanDiv, setLanDive] = useState(false);
+  const [lnDiv, setLnDive] = useState('');
 const nameChange = event => {
     setName(event.target.value);
  };
@@ -59,7 +63,7 @@ if(value){
               message: "Your form submitted successfully",
               type: "success",
               insert: "top",
-              container: "bottom-center",
+              container: "top-center",
               animationIn: ["animate__animated", "animate__fadeIn"],
               animationOut: ["animate__animated", "animate__fadeOut"],
               dismiss: {
@@ -90,17 +94,31 @@ if(value){
     <div >
       
       <div >
-        <ReactNotifications />
-        
+       
+        <div className={lnDiv}  >
       <div className={hHight}>
     <Header changeLanguage={changeLanguage} toggleDark={toggleDark} settoggleDark={settoggleDark}/>
     </div>
     <div className="aboutUs1">
 <h1 id="LP">{t('About')}</h1>
-<p>{t('About1')}</p>
+<p>{t('About1')}</p> <br />
+<h1 id="LP11">{t('About14')}</h1>
+<p>{t('About11')}</p> <br />
+<h1 id="LP11">{t('About15')}</h1>
+<p>{t('About12')}</p> <br />
+
+
+<div className="cbb">
+<Button variant="contained" color="primary" onClick={() => {{setLanDive(true)}{setLnDive('quizDiv')}}}>Contact Us</Button>
+</div>
     </div>
-    <div className="aboutUs">
-    <h1 id="LP">{t('About9')}</h1>
+    </div>
+    <div >
+    {lanDiv && ( 
+    <div className='quizLan1'>
+      < AiFillCloseCircle className='cross22' onClick={()=>{{navigate('/about')}{setLnDive('')}{setLanDive(false)}}}/>
+    <h1 id="LP1" >{t('About9')}</h1>
+    <ReactNotifications />
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
         <label>{t('share1')}</label>
@@ -142,7 +160,12 @@ if(value){
       </form>
     </StyledContactForm>
     </div>
+    )}
+    </div>
+    <div className={lnDiv}  id='fo' >
+
     <Footer/>
+    </div>
     </div>
     </div>
   );

@@ -249,6 +249,7 @@ export default function App() {
 	const [scoree, setScoree] = useState(0);
 	const [celeb, setCeleb] = useState(false);
 	const [value, setValue] = useState(false);
+	const [bvalue, setBvalue] = useState('Play Again');
 	const [list, setList] = useState(questions);
 	const [clicked, setClikced] = useState('');
 	const [sec, setSec] = useState(30);
@@ -292,10 +293,12 @@ export default function App() {
 		if(score<6){
 			setPass('Fail')
 			setCeleb(false)
+			setBvalue('Try Again')
 		}
 		if(score>6){
 			setPass('Pass')
 			setCeleb(true)
+			setBvalue('Play Again')
 		}
 
 	   };
@@ -370,7 +373,7 @@ export default function App() {
 					{pass}!! You scored {score} out of 10
 					</div>
 					<div className='playagainB'>
-					<Button onClick={handlePlayAgain} variant="contained" color="primary">Try Again</Button>
+					<Button onClick={handlePlayAgain} variant="contained" color="primary">{bvalue}</Button>
 					</div>
 				</div>
 			) : (

@@ -56,6 +56,19 @@
     margin-top: 10px;
     text-align: center;
   }
+  #LP1{
+    color: #06339c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    margin-right: 70px;
+  }
+  #LP11{
+    margin-top: -25px;
+    color: #06339c;
+    font-weight: bold;
+   
+  }
   #DLR{
     color: #06339c;
     font-weight: bold;
@@ -624,7 +637,27 @@ margin-right:5%
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 
   }
+  .quizLan1{
+    background-color: white;
+    display: inline-block;
+    width: 600px;
+    height: 500px;
+   padding-left: 100px;
+    position: absolute;
+    top: 240px;
+    right: 380px;
+    border-radius: 10px;
+    border: black 2px solid;
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+
+  }
   .cross{
+    margin-left: 450px;
+    margin-top: -40px;
+    width: 100px;
+    height: 40px;
+  }
+  .cross22{
     margin-left: 450px;
     margin-top: -40px;
     width: 100px;
@@ -1251,14 +1284,21 @@ margin-top: 30px;
 }
 .aboutUs1{
   height: 500px;
-  margin-top: 50px;
+  margin-top: 10px;
+  font-size: large;
   padding-left: 20px;
   padding-right: 20px;
   text-align: justify;
-  margin-bottom: 30px;
-  margin-left: 80px;
+  margin-bottom: 0px;
+  margin-left: 150px;
+  margin-right: 150px;
   padding-top: 20px;
-  width: 550px;
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.4);
+  
+}
+.cbb{
+  margin-bottom: 30px;
+
+}
+#fo{
+  margin-top: 30px;
 }

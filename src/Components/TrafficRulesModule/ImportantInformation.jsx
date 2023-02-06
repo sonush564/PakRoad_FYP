@@ -7,6 +7,9 @@ import { Player } from 'video-react';
 import {DefaultPlayer as Video} from 'react-html5video'
 import v1 from '../Video/v1.mp4'
 import v2 from '../Video/v2.mp4'
+import v3 from '../Video/v3.mp4'
+import v4 from '../Video/v4.mp4'
+import v5 from '../Video/v5.mp4'
 import { useTranslation, initReactI18next } from "react-i18next";
 import Footer from '../Header/Footer';
 
@@ -61,7 +64,7 @@ const ImportantInformation = ({changeLanguage, toggleDark, settoggleDark}) => {
 <div className='v3'> 
 <Player
       playsInline
-      src={v1}
+      src={v3}
     />
 </div>
 </div>
@@ -82,7 +85,7 @@ const ImportantInformation = ({changeLanguage, toggleDark, settoggleDark}) => {
 <div className='v4'> 
 <Player
       playsInline
-      src={v2}
+      src={v4}
     />
 </div>
 </div>
@@ -97,7 +100,7 @@ const ImportantInformation = ({changeLanguage, toggleDark, settoggleDark}) => {
 <div className='v5'> 
 <Player
       playsInline
-      src={v1}
+      src={v5}
     />
 </div>
 </div>
