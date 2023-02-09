@@ -1,5 +1,6 @@
 {
   "name": "pakroad",
+  "homepage": "https://sonush564.github.io/PakRoad_FYP",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "bootstrap-switch-button-react": "^1.2.0",
     "date-fns": "^2.29.1",
     "firebase": "^9.9.1",
+    "gh-pages": "^5.0.0",
     "i18next": "^21.10.0",
     "mdbreact": "^5.2.0",
     "moment": "^2.29.4",
@@ -51,6 +53,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
