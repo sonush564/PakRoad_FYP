@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PakRoad_FYP/static/css/main.9faf6b47.css",
-    "main.js": "/PakRoad_FYP/static/js/main.3ee7de6b.js",
+    "main.js": "/PakRoad_FYP/static/js/main.3c34f215.js",
     "static/js/787.9f9abdce.chunk.js": "/PakRoad_FYP/static/js/787.9f9abdce.chunk.js",
     "static/media/v3.mp4": "/PakRoad_FYP/static/media/v3.b3a237d1ccc1f20eb7c1.mp4",
     "static/media/v2.mp4": "/PakRoad_FYP/static/media/v2.c2be23ddb1589a1df8c3.mp4",
@@ -87,11 +87,11 @@
     "static/media/noright.jpg": "/PakRoad_FYP/static/media/noright.d91e923a4789481ec474.jpg",
     "index.html": "/PakRoad_FYP/index.html",
     "main.9faf6b47.css.map": "/PakRoad_FYP/static/css/main.9faf6b47.css.map",
-    "main.3ee7de6b.js.map": "/PakRoad_FYP/static/js/main.3ee7de6b.js.map",
+    "main.3c34f215.js.map": "/PakRoad_FYP/static/js/main.3c34f215.js.map",
     "787.9f9abdce.chunk.js.map": "/PakRoad_FYP/static/js/787.9f9abdce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9faf6b47.css",
-    "static/js/main.3ee7de6b.js"
+    "static/js/main.3c34f215.js"
   ]
 }
