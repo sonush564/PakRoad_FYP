@@ -53,7 +53,7 @@ function App() {
       <ThemeProvider theme={darkTheme}>
       <CssBaseline />
     <div className="App">
-     <BrowserRouter basename="PakRoad_FYP">
+     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home changeLanguage={changeLanguage} toggleDark={toggleDark}
       settoggleDark={settoggleDark} />}> </Route>
